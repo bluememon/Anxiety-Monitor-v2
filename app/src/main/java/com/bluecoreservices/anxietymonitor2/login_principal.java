@@ -111,17 +111,14 @@ public class login_principal extends AppCompatActivity {
         switch (position) {
             case "1":
                 // Go to therapist list
-                Log.e("moviendo", "moviendo a terapeutas");
                 intent = new Intent(login_principal.this, listadoTerapeutas.class);
                 break;
             case "2":
                 //Go to patient list
-                Log.e("moviendo", "moviendo a pacientes");
                 intent = new Intent(login_principal.this, ListadoPacientes.class);
                 break;
             case "3":
                 //Go to main activity
-                Log.e("moviendo", "moviendo a principal");
                 intent = new Intent(login_principal.this, MainActivity.class);
                 break;
         }
@@ -262,6 +259,8 @@ public class login_principal extends AppCompatActivity {
 
                         Log.i("login", "se agregaron las variables globales");
 
+                        sendToLandingPage(result.getString("type").toString());
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -269,14 +268,6 @@ public class login_principal extends AppCompatActivity {
                 else {
                     Toast.makeText(getApplicationContext(), "Nombre de usuario o password incorrecto", Toast.LENGTH_LONG).show();
                 }
-                /*if (s.equalsIgnoreCase("success")) {
-                    Intent intent = new Intent(login_principal.this, listadoTerapeutas.class);
-                    intent.putExtra(USER_NAME, username);
-                    finish();
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(getApplicationContext(), "Invalid User Name or Password", Toast.LENGTH_LONG).show();
-                }*/
             }
         }
         LoginAsync la = new LoginAsync();

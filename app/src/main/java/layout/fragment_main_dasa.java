@@ -18,6 +18,7 @@ import android.widget.SimpleAdapter;
 
 import com.bluecoreservices.anxietymonitor2.JSONParser;
 import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
+import com.bluecoreservices.anxietymonitor2.MainActivity;
 import com.bluecoreservices.anxietymonitor2.R;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
@@ -69,13 +70,12 @@ public class fragment_main_dasa extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dasasList = new ArrayList<HashMap<String, String>>();
+        idPaciente = MainActivity.idPaciente;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        idPaciente = getActivity().getIntent().getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
         dasaURL += idPaciente;
         dasaURLLista += idPaciente;
         view = inflater.inflate(R.layout.fragment_main_dasa, container, false);

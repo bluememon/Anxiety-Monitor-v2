@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (sharedPref.getString("logged", null) != null) {
             Log.i("Main Activity: logged", sharedPref.getString("logged", ""));
-            Log.i("Main Activity: id", sharedPref.getString("id", ""));
+            Log.i("Main Activity: id", sharedPref.getString("userId", ""));
             Log.i("Main Activity:firstName", sharedPref.getString("firstName", ""));
             Log.i("Main Activity: lastName", sharedPref.getString("lastName", ""));
             Log.i("Main Activity: type", sharedPref.getString("type", ""));
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                 case "3":
-                    idPaciente = sharedPref.getString("id", "");
+                    idPaciente = sharedPref.getString("userId", "");
                     isPatient = true;
                     break;
             }
