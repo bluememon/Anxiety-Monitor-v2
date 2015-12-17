@@ -1,0 +1,186 @@
+CURRENT STATS:
+System memory usage:
+  SOff/Norm: 1 samples:
+    Cached: 0.89GB min, 0.89GB avg, 0.89GB max
+    Free: 194MB min, 194MB avg, 194MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 130MB min, 130MB avg, 130MB max
+    Native: 62MB min, 62MB avg, 62MB max
+  SOn /Norm: 4 samples:
+    Cached: 513MB min, 757MB avg, 899MB max
+    Free: 119MB min, 173MB avg, 247MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 129MB min, 131MB avg, 134MB max
+    Native: 61MB min, 62MB avg, 62MB max
+
+Per-Package Stats:
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+            (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+               TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+                 Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+          (Last Act): 0.15%
+            (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+
+Summary:
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+           TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+             Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+      (Last Act): 0.15%
+        (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+        (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
+
+Run time Stats:
+  SOff/Norm: +57m44s300ms (running)
+  SOn /Norm: +18m28s567ms
+      TOTAL: +1h16m12s867ms
+
+Memory usage:
+  Kernel : 131MB (39 samples)
+  Native : 62MB (39 samples)
+  Persist: 305MB (66 samples)
+  Top    : 59MB (61 samples)
+  ImpFg  : 241MB (190 samples)
+  ImpBg  : 329KB (156 samples)
+  Service: 342MB (437 samples)
+  Receivr: 77KB (456 samples)
+  LastAct: 704KB (37 samples)
+  CchAct : 24MB (40 samples)
+  CchEmty: 167MB (319 samples)
+  Cached : 781MB (39 samples)
+  Free   : 177MB (39 samples)
+  TOTAL  : 2.2GB
+  ServRst: 132KB (40 samples)
+
+          Start time: 2015-12-14 09:27:20
+  Total elapsed time: +2h13m33s401ms (partial) libart.so
+
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOff/Norm: 12 samples:
+    Cached: 167MB min, 454MB avg, 0.89GB max
+    Free: 109MB min, 151MB avg, 194MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 123MB min, 132MB avg, 136MB max
+    Native: 60MB min, 60MB avg, 62MB max
+  SOn /Norm: 30 samples:
+    Cached: 7.4MB min, 466MB avg, 899MB max
+    Free: 106MB min, 182MB avg, 416MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 121MB min, 131MB avg, 137MB max
+    Native: 58MB min, 60MB avg, 71MB max
+
+Per-Package Stats:
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+               TOTAL: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
+                 Top: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
+          (Last Act): 10% (17MB-30MB-44MB/15MB-28MB-42MB over 10)
+            (Cached): 54% (12MB-31MB-40MB/10MB-29MB-38MB over 42)
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+               TOTAL: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+                 Top: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+          (Last Act): 0.02%
+            (Cached): 0.73% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+
+Summary:
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+           TOTAL: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
+             Top: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
+      (Last Act): 10% (17MB-30MB-44MB/15MB-28MB-42MB over 10)
+        (Cached): 54% (12MB-31MB-40MB/10MB-29MB-38MB over 42)
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+           TOTAL: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+             Top: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+      (Last Act): 0.02%
+        (Cached): 0.73% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+
+Run time Stats:
+  SOff/Norm: +7h10m56s28ms
+  SOn /Norm: +3h5m20s218ms
+      TOTAL: +10h16m16s246ms
+
+Memory usage:
+  Kernel : 131MB (294 samples)
+  Native : 60MB (294 samples)
+  Persist: 288MB (551 samples)
+  Top    : 88MB (853 samples)
+  ImpFg  : 264MB (1750 samples)
+  ImpBg  : 261KB (1903 samples)
+  Service: 402MB (3341 samples)
+  Receivr: 62KB (3444 samples)
+  LastAct: 10MB (535 samples)
+  CchAct : 259MB (308 samples)
+  CchCAct: 4.0MB (33 samples)
+  CchEmty: 149MB (1937 samples)
+  Cached : 458MB (294 samples)
+  Free   : 160MB (294 samples)
+  TOTAL  : 2.2GB
+  ServRst: 72KB (793 samples)
+
+          Start time: 2015-12-13 10:27:18
+  Total elapsed time: +1d1h13m48s371ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOff/Norm: 1 samples:
+    Cached: 0.89GB min, 0.89GB avg, 0.89GB max
+    Free: 194MB min, 194MB avg, 194MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 130MB min, 130MB avg, 130MB max
+    Native: 62MB min, 62MB avg, 62MB max
+  SOn /Norm: 4 samples:
+    Cached: 513MB min, 757MB avg, 899MB max
+    Free: 119MB min, 173MB avg, 247MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 129MB min, 131MB avg, 134MB max
+    Native: 61MB min, 62MB avg, 62MB max
+
+Per-Package Stats:
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+            (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+               TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+                 Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+          (Last Act): 0.15%
+            (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+
+Summary:
+  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+           TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+             Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
+      (Last Act): 0.15%
+        (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
+  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+        (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
+
+Run time Stats:
+  SOff/Norm: +57m44s406ms
+  SOn /Norm: +18m28s567ms
+      TOTAL: +1h16m12s973ms
+
+Memory usage:
+  Kernel : 131MB (39 samples)
+  Native : 62MB (39 samples)
+  Persist: 305MB (66 samples)
+  Top    : 59MB (61 samples)
+  ImpFg  : 241MB (190 samples)
+  ImpBg  : 329KB (156 samples)
+  Service: 342MB (437 samples)
+  Receivr: 77KB (456 samples)
+  LastAct: 704KB (37 samples)
+  CchAct : 24MB (40 samples)
+  CchEmty: 167MB (319 samples)
+  Cached : 781MB (39 samples)
+  Free   : 177MB (39 samples)
+  TOTAL  : 2.2GB
+  ServRst: 132KB (40 samples)
+
+          Start time: 2015-12-14 09:27:20
+  Total elapsed time: +2h13m33s499ms (partial) libart.so

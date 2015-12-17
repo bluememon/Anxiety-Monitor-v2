@@ -1,0 +1,81 @@
+<resources>
+    <!-- strings generales español -->
+    <string name="app_name">Anxiety Monitor</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Labels del login en español -->
+    <string name="user_username">Nombre de Usuario</string>
+    <string name="user_password">Contraseña</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <!-- Labels para agregar terapeuta español -->
+    <string name="add_therapist_sub_title">Agregar Terapeuta</string>
+    <string name="add_therapist_label_first_name">Nombre Terapeuta</string>
+    <string name="add_therapist_label_last_name">Apellido Terapeuta</string>
+    <string name="add_therapist_label_user_name">Nombre Usuario</string>
+    <string name="add_therapist_label_password">Contraseña</string>
+    <string name="add_therapist_label_repeat_password">Repetir Contraseña</string>
+
+    <!-- Labels para agregar paciente español -->
+    <string name="add_patient_sub_title">Agregar Paciente</string>
+    <string name="add_patient_label_first_name">Nombre Paciente</string>
+    <string name="add_patient_label_last_name">Apellido Paciente</string>
+    <string name="add_patient_label_user_name">Nombre Usuario</string>
+    <string name="add_patient_label_password">Contraseña</string>
+    <string name="add_patient_label_repeat_password">Repetir Contraseña</string>
+    <string name="title_activity_add_dasa">\@string/add_dasa_title</string>
+
+    <!-- Labels para agregar reporte diario dasa español -->
+    <string name="add_dasa_sub_title">Reporte Diario</string>
+    <string name="dasa_label_1">Durante las últimas 24 horas, ¿cuánta ansiedad ha sentido en promedio?</string>
+    <string name="dasa_label_1_1">Sin ansiedad</string>
+    <string name="dasa_label_1_2">Ansiedad moderada</string>
+    <string name="dasa_label_1_3">Ansiedad extrema</string>
+
+    <string name="dasa_label_2">Durante las últimas 24 horas, ¿cuánta ansiedad ha sentido en su momento de mayor ansiedad?</string>
+    <string name="dasa_label_2_1">Sin ansiedad</string>
+    <string name="dasa_label_2_2">Ansiedad moderada</string>
+    <string name="dasa_label_2_3">Ansiedad extrema</string>
+
+    <string name="dasa_label_3">Durante las últimas 24 horas, ¿cuánta preocupación ha sentido en promedio?</string>
+    <string name="dasa_label_3_1">Sin preocupación</string>
+    <string name="dasa_label_3_2">Preocupación moderada</string>
+    <string name="dasa_label_3_3">Preocupación extrema</string>
+
+    <string name="dasa_label_4">Durante las últimas 24 horas, ¿con qué frecuencia se sintió tenso (cuando estaba despierto)?</string>
+    <string name="dasa_label_4_1">Nunca</string>
+    <string name="dasa_label_4_2">Como la mitad de las veces</string>
+    <string name="dasa_label_4_3">Siempre</string>
+
+    <string name="dasa_label_5">Durante las últimas 24 horas, ¿cuánta irritabilidad sintió en su momento de mayor irritabilidad?</string>
+    <string name="dasa_label_5_1">Sin irritabilidad</string>
+    <string name="dasa_label_5_2">Irritabilidad moderada</string>
+    <string name="dasa_label_5_3">Irritabilidad extrema</string>
+
+    <string name="dasa_label_6">Durante las últimas 24 horas, ¿con qué frecuencia se sintió tranquilo o relajado (cuando estaba despierto)?</string>
+    <string name="dasa_label_6_1">Nunca</string>
+    <string name="dasa_label_6_2">Como la mitad de las veces</string>
+    <string name="dasa_label_6_3">Siempre</string>
+
+    <string name="dasa_label_7">Durante las últimas 24 horas, ¿con qué frecuencia tuvo dificultades para concentrarse o enfocarse en lo que estaba haciendo (cuando estaba despierto)?</string>
+    <string name="dasa_label_7_1">Nunca</string>
+    <string name="dasa_label_7_2">Como la mitad de las veces</string>
+    <string name="dasa_label_7_3">Siempre</string>
+
+    <string name="dasa_label_8">¿Cuánta dificultad tuvo para quedarse dormido anoche?</string>
+    <string name="dasa_label_8_1">Sin dificultad</string>
+    <string name="dasa_label_8_2">Dificultad moderada</string>
+    <string name="dasa_label_8_3">Dificultad extrema</string>
+    <string name="title_activity_login_principal">Sign in</string>
+
+
+</resources>

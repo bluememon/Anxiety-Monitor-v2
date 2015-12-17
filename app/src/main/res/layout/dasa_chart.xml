@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardUseCompatPadding="true"
+        android:elevation="14dp"
+        android:padding="10dp">
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/dasa_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

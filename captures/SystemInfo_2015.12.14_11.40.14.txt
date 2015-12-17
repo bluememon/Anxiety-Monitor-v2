@@ -1,0 +1,32 @@
+Applications Memory Usage (kB):
+Uptime: 208682956 Realtime: 527004167
+
+** MEMINFO in pid 13149 [com.bluecoreservices.anxietymonitor2] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     1048      948        0        0     8192     2764     5427
+  Dalvik Heap     1326      488        0        0    45579    29400    16179
+ Dalvik Other      388      172        0        0                           
+        Stack       60       56        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap      174       44       72        0                           
+    .apk mmap       28        0        0        0                           
+    .oat mmap      193        0       24        0                           
+    .art mmap     1853     1724        4        0                           
+   Other mmap        5        4        0        0                           
+      Unknown       36       36        0        0                           
+        TOTAL     5115     3472      104        0    53771    32164    21606
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        4        AssetManagers:        4
+       Local Binders:        2        Proxy Binders:       10
+       Parcel memory:        1         Parcel count:        6
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

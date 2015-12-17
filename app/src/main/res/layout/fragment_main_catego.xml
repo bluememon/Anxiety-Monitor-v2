@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="layout.fragment_main_catego" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingBottom="0dp"
+            android:layout_marginBottom="0dp">
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/catego_card"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="14dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardUseCompatPadding="true"
+                android:padding="10dp"
+                android:paddingBottom="0dp">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chartCatego"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragment_main_catego_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categos_lista">
+                </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</FrameLayout>

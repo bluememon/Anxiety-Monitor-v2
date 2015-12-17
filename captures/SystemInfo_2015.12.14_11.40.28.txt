@@ -1,0 +1,35 @@
+Applications Memory Usage (kB):
+Uptime: 208696932 Realtime: 527018143
+
+** MEMINFO in pid 13149 [com.bluecoreservices.anxietymonitor2] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     3832     3788        0        0    12288     6176     6111
+  Dalvik Heap     3769     2980        0        0    45655    31519    14136
+ Dalvik Other      736      736        0        0                           
+        Stack      156      156        0        0                           
+      Gfx dev     1362     1316        0        0                           
+    Other dev        5        0        4        0                           
+     .so mmap     1316      316      464        0                           
+    .apk mmap      145        0       24        0                           
+    .ttf mmap       50        0       36        0                           
+    .dex mmap     3324        0     3320        0                           
+    .oat mmap     1301        0      344        0                           
+    .art mmap     3148     1960      712        0                           
+   Other mmap        6        4        0        0                           
+      Unknown      152      152        0        0                           
+        TOTAL    19302    11408     4904        0    57943    37695    20247
+ 
+ Objects
+               Views:       33         ViewRootImpl:        1
+         AppContexts:        3           Activities:        1
+              Assets:        4        AssetManagers:        4
+       Local Binders:       10        Proxy Binders:       15
+       Parcel memory:        3         Parcel count:       12
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
