@@ -3,6 +3,7 @@ package com.bluecoreservices.anxietymonitor2;
         import android.app.ProgressDialog;
         import android.content.Context;
         import android.content.Intent;
+        import android.content.SharedPreferences;
         import android.net.ConnectivityManager;
         import android.net.NetworkInfo;
         import android.net.Uri;
@@ -40,6 +41,7 @@ public class ListadoPacientes extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    SharedPreferences sharedPref;
     private String urlText;
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView listView;
@@ -52,15 +54,47 @@ public class ListadoPacientes extends AppCompatActivity {
     ListView lista;
     TextView terapeuta_elemento;
     View headerView;
+    Boolean isAdmin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPref = getSharedPreferences("userPref", 0);
+
+        if (sharedPref.getString("logged", null) != null) {
+            Log.i("logged", sharedPref.getString("logged", ""));
+            Log.i("id", sharedPref.getString("id", ""));
+            Log.i("firstName", sharedPref.getString("firstName", ""));
+            Log.i("lastName", sharedPref.getString("lastName", ""));
+            Log.i("type", sharedPref.getString("type", ""));
+
+            Intent intent = getIntent();
+            //idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
+
+            switch (sharedPref.getString("type", "")) {
+                case "1":
+                    // Obtener el id de la lista de terapeutas
+                    idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
+                    isAdmin = true;
+                    break;
+                case "2":
+                    //Obtener el id del terapeuta de las preferencias
+                    idTerapeuta = sharedPref.getString("id", "");
+                    break;
+            }
+        }
+
         setContentView(R.layout.activity_listado_pacientes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Anxiety Monitor");
         toolbar.setSubtitle("Listado Pacientes");
+
+        //Aquí agregamos la flecha de regreso solamente si es usuario tipo administrador
+        if (isAdmin) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -70,12 +104,6 @@ public class ListadoPacientes extends AppCompatActivity {
                 agregarPaciente(idTerapeuta);
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        Intent intent = getIntent();
-        idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
-
-        Log.d("intent", idTerapeuta);
 
         patientsList = new ArrayList<HashMap<String, String>>();
 

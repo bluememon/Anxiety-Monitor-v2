@@ -1,9 +1,9 @@
 package com.bluecoreservices.anxietymonitor2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,9 @@ import layout.fragment_main_dasa;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
-    private String idPaciente;
+    public static String idPaciente;
+    SharedPreferences sharedPref;
+    Boolean isPatient = false;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -43,11 +46,58 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPref = getSharedPreferences("userPref", 0);
+
+        if (sharedPref.getString("logged", null) != null) {
+            Log.i("Main Activity: logged", sharedPref.getString("logged", ""));
+            Log.i("Main Activity: id", sharedPref.getString("id", ""));
+            Log.i("Main Activity:firstName", sharedPref.getString("firstName", ""));
+            Log.i("Main Activity: lastName", sharedPref.getString("lastName", ""));
+            Log.i("Main Activity: type", sharedPref.getString("type", ""));
+
+            Intent intent = getIntent();
+            switch (sharedPref.getString("type", "")) {
+                case "1":
+                    // Obtener el id de la lista de terapeutas
+                    if (intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE) != null){
+                        SharedPreferences.Editor editor= sharedPref.edit();
+                        editor.putString("idPaciente", intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE));
+                        editor.commit();
+
+                        idPaciente = intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
+                    }
+                    else {
+                        idPaciente = sharedPref.getString("idPaciente", "");
+                    }
+                    break;
+                case "2":
+                    //Obtener el id del terapeuta de las preferencias
+                    if (intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE) != null){
+                        SharedPreferences.Editor editor= sharedPref.edit();
+                        editor.putString("idPaciente", intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE));
+                        editor.commit();
+
+                        idPaciente = intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
+                    }
+                    else {
+                        idPaciente = sharedPref.getString("idPaciente", "");
+                    }
+                    break;
+                case "3":
+                    idPaciente = sharedPref.getString("id", "");
+                    isPatient = true;
+                    break;
+            }
+        }
+
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (!isPatient) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -67,11 +117,6 @@ public class MainActivity extends AppCompatActivity {
                 agregarDASA(idPaciente);
             }
         });
-
-        Intent intent = getIntent();
-        idPaciente = intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
-
-
     }
 
 

@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -34,6 +35,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -59,6 +62,9 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class login_principal extends AppCompatActivity {
 
+    SharedPreferences sharedPref;
+
+
     private EditText editTextUserName;
     private EditText editTextPassword;
 
@@ -70,6 +76,18 @@ public class login_principal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = getSharedPreferences("userPref", 0);
+
+        if (sharedPref.getString("logged", null) != null) {
+            Log.i("logged", sharedPref.getString("logged", ""));
+            Log.i("id", sharedPref.getString("id", ""));
+            Log.i("firstName", sharedPref.getString("firstName", ""));
+            Log.i("lastName", sharedPref.getString("lastName", ""));
+            Log.i("type", sharedPref.getString("type", ""));
+
+            sendToLandingPage(sharedPref.getString("type", ""));
+        }
+
         setContentView(R.layout.activity_login_principal);
 
         editTextUserName = (EditText) findViewById(R.id.username);
@@ -79,13 +97,35 @@ public class login_principal extends AppCompatActivity {
         signInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                //attemptLogin();
                 username = editTextUserName.getText().toString();
                 password = editTextPassword.getText().toString();
 
-                login(username,password);
+                login(username, password);
             }
         });
+    }
+
+    public void sendToLandingPage(String position) {
+        Intent intent = null;
+        Log.e("tipo actual", position);
+        switch (position) {
+            case "1":
+                // Go to therapist list
+                Log.e("moviendo", "moviendo a terapeutas");
+                intent = new Intent(login_principal.this, listadoTerapeutas.class);
+                break;
+            case "2":
+                //Go to patient list
+                Log.e("moviendo", "moviendo a pacientes");
+                intent = new Intent(login_principal.this, ListadoPacientes.class);
+                break;
+            case "3":
+                //Go to main activity
+                Log.e("moviendo", "moviendo a principal");
+                intent = new Intent(login_principal.this, MainActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 
     public static String getMD5EncryptedString(String encTarget){
@@ -106,7 +146,7 @@ public class login_principal extends AppCompatActivity {
 
     private void login(final String username, String password) {
 
-        class LoginAsync  extends AsyncTask<String, Void, String> {
+        class LoginAsync  extends AsyncTask<String, Void, JSONObject> {
             private Dialog loadingDialog;
             private final String url = "http://app.bluecoreservices.com/webservices/loginCheck.php";
 
@@ -126,7 +166,7 @@ public class login_principal extends AppCompatActivity {
             }
 
             @Override
-            protected String doInBackground(String... params) {
+            protected JSONObject doInBackground(String... params) {
 
                 String uname = params[0];
                 String pass = params[1];
@@ -155,8 +195,6 @@ public class login_principal extends AppCompatActivity {
                     conn.connect();
 
                     paramsString = sbParams.toString();
-                    Log.i("String Parametros", paramsString);
-
 
                     wr = new DataOutputStream(conn.getOutputStream());
                     wr.writeBytes(paramsString);
@@ -184,17 +222,53 @@ public class login_principal extends AppCompatActivity {
 
                 conn.disconnect();
 
-                //Log.i("Resultado", result.toString());
+                String stringResult = result.toString().trim();
 
-                return result.toString();
+                try {
+                    jObj = new JSONObject(stringResult);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                return jObj;
             }
 
 
             @Override
-            protected void onPostExecute(String result) {
-                Log.i("Resultado Login", result );
-                String s = result.trim();
+            protected void onPostExecute(JSONObject result) {
+                //String s = result.trim();
+                String tipo = null;
+                Log.i("variable s", result.toString());
                 loadingDialog.dismiss();
+
+                try {
+                    tipo = result.getString("logged");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                if (tipo == "true") {
+                    Log.i("login", "si lo encontro como trv");
+                    SharedPreferences.Editor editor= sharedPref.edit();
+
+                    try {
+                        editor.putString("logged", result.getString("logged").toString());
+                        editor.putString("userId", result.getString("id").toString());
+                        editor.putString("firstName", result.getString("firstName").toString());
+                        editor.putString("lastName", result.getString("lastName").toString());
+                        editor.putString("type", result.getString("type").toString());
+
+                        editor.commit();
+
+                        Log.i("login", "se agregaron las variables globales");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Nombre de usuario o password incorrecto", Toast.LENGTH_LONG).show();
+                }
                 /*if (s.equalsIgnoreCase("success")) {
                     Intent intent = new Intent(login_principal.this, listadoTerapeutas.class);
                     intent.putExtra(USER_NAME, username);

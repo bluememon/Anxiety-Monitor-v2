@@ -153,11 +153,6 @@ public class fragment_main_dasa extends Fragment {
         protected void onPostExecute(JSONObject result) {
             procesaJSON(result);
             swipeRefreshLayout.setRefreshing(false);
-
-            Snackbar snackbar = Snackbar
-                    .make(getActivity().findViewById(R.id.main_content), "Lista Actualizada", Snackbar.LENGTH_LONG);
-
-            snackbar.show();
         }
     }
 

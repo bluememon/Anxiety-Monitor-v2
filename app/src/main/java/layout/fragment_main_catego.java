@@ -19,6 +19,7 @@ import android.widget.SimpleAdapter;
 
 import com.bluecoreservices.anxietymonitor2.JSONParser;
 import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
+import com.bluecoreservices.anxietymonitor2.MainActivity;
 import com.bluecoreservices.anxietymonitor2.R;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -38,14 +39,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class fragment_main_catego extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "idPaciente";
     private SwipeRefreshLayout swipeRefreshLayout;
     View view;
     PieChart pieChart;
     ListView lista;
-    String idPaciente;
+    public static String idPaciente;
     String dasaURL = "http://app.bluecoreservices.com/webservices/getMoodInfoGet.php?idPaciente=";
     String dasaURLLista = "http://app.bluecoreservices.com/webservices/ListCategoGet.php?idPaciente=";
     JSONParser json1 = new JSONParser();
@@ -55,8 +53,6 @@ public class fragment_main_catego extends Fragment {
 
     ArrayList<HashMap<String, String>> categosList;
 
-
-
     public fragment_main_catego() {
         // Required empty public constructor
     }
@@ -65,12 +61,14 @@ public class fragment_main_catego extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         categosList = new ArrayList<HashMap<String, String>>();
+        idPaciente = MainActivity.idPaciente;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        idPaciente = getActivity().getIntent().getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
+        //idPaciente = getActivity().getIntent().getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
+        Log.e("main id paciente", idPaciente);
         dasaURL += idPaciente;
         dasaURLLista += idPaciente;
         Log.i("urlcompleto_catego", dasaURL);
@@ -148,11 +146,6 @@ public class fragment_main_catego extends Fragment {
         protected void onPostExecute(JSONObject result) {
             procesaJSON(result);
             swipeRefreshLayout.setRefreshing(false);
-
-            Snackbar snackbar = Snackbar
-                    .make(getActivity().findViewById(R.id.main_content), "Categorias Actualizadas", Snackbar.LENGTH_LONG);
-
-            snackbar.show();
         }
     }
 
