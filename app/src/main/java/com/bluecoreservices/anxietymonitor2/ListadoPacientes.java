@@ -40,7 +40,6 @@ public class ListadoPacientes extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
     SharedPreferences sharedPref;
     private String urlText;
     private SwipeRefreshLayout swipeRefreshLayout;
@@ -64,23 +63,31 @@ public class ListadoPacientes extends AppCompatActivity {
 
         if (sharedPref.getString("logged", null) != null) {
             Log.i("logged", sharedPref.getString("logged", ""));
-            Log.i("id", sharedPref.getString("id", ""));
+            Log.i("id", sharedPref.getString("userId", ""));
             Log.i("firstName", sharedPref.getString("firstName", ""));
             Log.i("lastName", sharedPref.getString("lastName", ""));
             Log.i("type", sharedPref.getString("type", ""));
 
             Intent intent = getIntent();
-            //idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
 
             switch (sharedPref.getString("type", "")) {
                 case "1":
                     // Obtener el id de la lista de terapeutas
-                    idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
+                    if (intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE) != null) {
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("idTerapeuta", intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE));
+                        editor.commit();
+
+                        idTerapeuta = intent.getStringExtra(listadoTerapeutas.EXTRA_MESSAGE);
+                    }
+                    else {
+                        idTerapeuta = sharedPref.getString("idTerapeuta", "");
+                    }
                     isAdmin = true;
                     break;
                 case "2":
                     //Obtener el id del terapeuta de las preferencias
-                    idTerapeuta = sharedPref.getString("id", "");
+                    idTerapeuta = sharedPref.getString("userId", "");
                     break;
             }
         }
@@ -136,10 +143,6 @@ public class ListadoPacientes extends AppCompatActivity {
                                     }
                                 }
         );
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     public void cargarDatos() {
@@ -254,46 +257,6 @@ public class ListadoPacientes extends AppCompatActivity {
         Intent intent = new Intent(this, add_patient.class);
         intent.putExtra(EXTRA_MESSAGE_TERAPEUTA, idTerapeuta);
         startActivity(intent);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "listadoTerapeutas Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.bluecoreservices.anxietymonitor2/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "listadoTerapeutas Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.bluecoreservices.anxietymonitor2/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
     }
 }
 

@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import layout.dasa_calendar;
 import layout.fragment_main_catego;
 import layout.fragment_main_dasa;
 
@@ -172,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
                     return new fragment_main_catego();
                 case 1:
                     return new fragment_main_dasa();
+                case 2:
+                    return new dasa_calendar();
             }
 
             return null;
@@ -179,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
-            return 2;
+            // Show 3 total pages.
+            return 3;
         }
 
         @Override
@@ -190,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Categorias";
                 case 1:
                     return "Diario DASA";
+                case 2:
+                    return "Calendario DASA";
             }
             return null;
         }
