@@ -11,13 +11,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left|top">
 
-        <CalendarView
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/calendarView"
-            android:layout_gravity="left|top"
-            android:focusableInTouchMode="false"
-            android:showWeekNumber="true" />
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:mcv_showOtherDates="all"
+            app:mcv_selectionColor="#00F"
+            />
 
     </LinearLayout>
 </FrameLayout>

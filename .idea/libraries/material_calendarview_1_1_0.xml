@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="material-calendarview-1.1.0">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/1.1.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/1.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/1.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.prolificinteractive/material-calendarview/1.1.0/f8dfecd05630cec22ea1ea4aee866d6c13c46364/material-calendarview-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
