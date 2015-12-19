@@ -5,6 +5,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -55,6 +57,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
+import service.dasa_notifications;
+
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -103,6 +107,9 @@ public class login_principal extends AppCompatActivity {
                 login(username, password);
             }
         });
+
+        startService(new Intent(this, dasa_notifications.class));
+
     }
 
     public void sendToLandingPage(String position) {

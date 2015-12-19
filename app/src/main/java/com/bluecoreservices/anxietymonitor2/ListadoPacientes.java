@@ -21,10 +21,6 @@ package com.bluecoreservices.anxietymonitor2;
         import android.widget.SimpleAdapter;
         import android.widget.TextView;
 
-        import com.google.android.gms.appindexing.Action;
-        import com.google.android.gms.appindexing.AppIndex;
-        import com.google.android.gms.common.api.GoogleApiClient;
-
         import org.json.JSONArray;
         import org.json.JSONException;
         import org.json.JSONObject;

@@ -62,16 +62,16 @@ public class fragment_main_catego extends Fragment {
         super.onCreate(savedInstanceState);
         categosList = new ArrayList<HashMap<String, String>>();
         idPaciente = MainActivity.idPaciente;
+
+        Log.e("main id paciente", idPaciente);
+        dasaURL += idPaciente;
+        dasaURLLista += idPaciente;
+        Log.i("urlcompleto_catego", dasaURL);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //idPaciente = getActivity().getIntent().getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
-        Log.e("main id paciente", idPaciente);
-        dasaURL += idPaciente;
-        dasaURLLista += idPaciente;
-        Log.i("urlcompleto_catego", dasaURL);
 
         view = inflater.inflate(R.layout.fragment_main_catego, container, false);
         //View headerView = View.inflate(getActivity(), R.layout.catego_chart, null);

@@ -71,13 +71,15 @@ public class fragment_main_dasa extends Fragment {
         super.onCreate(savedInstanceState);
         dasasList = new ArrayList<HashMap<String, String>>();
         idPaciente = MainActivity.idPaciente;
+
+        dasaURL += idPaciente;
+        dasaURLLista += idPaciente;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        dasaURL += idPaciente;
-        dasaURLLista += idPaciente;
+
         view = inflater.inflate(R.layout.fragment_main_dasa, container, false);
         View headerView = View.inflate(getActivity(), R.layout.dasa_chart, null);
         lineChart = (LineChart) headerView.findViewById(R.id.dasa_chart);
