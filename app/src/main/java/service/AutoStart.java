@@ -3,6 +3,7 @@ package service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 /**
  * Created by Guillermo Uribe on 18/12/2015.
@@ -10,6 +11,7 @@ import android.content.Intent;
 public class AutoStart extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
+        Log.i("autoStart", "entrando autostart");
         context.startService(new Intent(context, dasa_notifications.class));
     }
 }

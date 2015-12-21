@@ -3,6 +3,7 @@ package com.bluecoreservices.anxietymonitor2;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -29,8 +30,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import service.dasa_notifications;
+
 public class add_dasa extends AppCompatActivity {
     public final static String PAGINA_DEBUG = "add_dasa";
+    SharedPreferences sharedPref;
 
     private Integer idPaciente;
 
@@ -57,6 +61,8 @@ public class add_dasa extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = getSharedPreferences("userPref", 0);
+
         setContentView(R.layout.activity_add_dasa);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -82,7 +88,14 @@ public class add_dasa extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
-        idPaciente = Integer.parseInt(intent.getStringExtra(MainActivity.EXTRA_MESSAGE));
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            idPaciente = Integer.parseInt(intent.getStringExtra(MainActivity.EXTRA_MESSAGE));
+        }
+        else {
+            idPaciente = Integer.parseInt(sharedPref.getString("userId", ""));
+        }
+
 
         add_dasa_1 = (SeekBar) findViewById(R.id.add_dasa_1);
         add_dasa_2 = (SeekBar) findViewById(R.id.add_dasa_2);
