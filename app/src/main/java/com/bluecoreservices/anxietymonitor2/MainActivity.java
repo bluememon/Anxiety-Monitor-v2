@@ -18,6 +18,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
+import android.widget.RelativeLayout;
 
 import layout.dasa_calendar;
 import layout.fragment_main_catego;
@@ -28,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
     public static String idPaciente;
     SharedPreferences sharedPref;
     Boolean isPatient = false;
+
+    RelativeLayout backgroundMenu =  (RelativeLayout)findViewById(R.id.backgroundViewMenu);
+
+    Animation rotateButton = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatebutton);
+    Animation showElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.showmenu);
+    Animation hideElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.hidemenu);
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -111,14 +121,24 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*if (backgroundMenu.getVisibility() == View.INVISIBLE){
+                    backgroundMenu.setVisibility(View.VISIBLE);
+                    backgroundMenu.startAnimation(showElements);
+                    fab.startAnimation(rotateButton);
+                }
+                else {
+                    backgroundMenu.startAnimation(hideElements);
+                    fab.startAnimation(rotateButton);
+                }*/
                 agregarDASA(idPaciente);
             }
         });
-    }
+    } 
 
 
     @Override
