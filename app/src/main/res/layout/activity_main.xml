@@ -45,23 +45,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:focusableInTouchMode="true"
-        android:clickable="true">
+        android:id="@+id/backgroundViewMenuContainer">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#a0000000"
             android:visibility="invisible"
+            android:clickable="true"
             android:id="@+id/backgroundViewMenu">
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/menu_item_dasa"
+            android:visibility="invisible">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabDasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dasaicon"
+            app:fab_colorNormal="#DA4336"
+            app:fab_colorPressed="#E75043"
+            app:fab_colorRipple="#99FFFFFF"
+            app:fab_size="normal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Diario"
+            android:background="#202020"
+            android:textColor="#ffffff"
+            android:textAlignment="textEnd"
+            android:padding="5dp"
+            android:id="@+id/dasaLabel"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="180dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/menu_item_catego"
+            android:visibility="invisible">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabCatego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/categoicon"
+                app:fab_colorNormal="#DA4336"
+                app:fab_colorPressed="#E75043"
+                app:fab_colorRipple="#99FFFFFF"
+                app:fab_size="normal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar Crisis"
+                android:background="#202020"
+                android:textColor="#ffffff"
+                android:textAlignment="textEnd"
+                android:padding="5dp"
+                android:id="@+id/categoLabel"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="70dp" />
+        </RelativeLayout>
+
     </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|right"
+        android:layout_gravity="bottom|right"
         android:src="@drawable/ic_add_24dp"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"

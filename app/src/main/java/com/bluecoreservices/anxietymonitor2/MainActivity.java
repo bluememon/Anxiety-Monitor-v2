@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -33,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
     Boolean isPatient = false;
 
-    RelativeLayout backgroundMenu =  (RelativeLayout)findViewById(R.id.backgroundViewMenu);
+    //pointer to fab button
+    android.support.design.widget.FloatingActionButton fab;
+    com.github.clans.fab.FloatingActionButton fabDasa;
+    RelativeLayout backgroundMenu;
 
-    Animation rotateButton = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatebutton);
-    Animation showElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.showmenu);
-    Animation hideElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.hidemenu);
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -121,24 +122,100 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
+        fabDasa =  (com.github.clans.fab.FloatingActionButton)findViewById(R.id.fabDasa);
+        backgroundMenu =  (RelativeLayout)findViewById(R.id.backgroundViewMenu);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*if (backgroundMenu.getVisibility() == View.INVISIBLE){
-                    backgroundMenu.setVisibility(View.VISIBLE);
-                    backgroundMenu.startAnimation(showElements);
-                    fab.startAnimation(rotateButton);
-                }
-                else {
-                    backgroundMenu.startAnimation(hideElements);
-                    fab.startAnimation(rotateButton);
-                }*/
+                animateMenu();
+            }
+        });
+        backgroundMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animateMenu();
+            }
+        });
+
+        fabDasa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 agregarDASA(idPaciente);
             }
         });
-    } 
+    }
+
+    public void animateMenu() {
+        final RelativeLayout itemDasa = (RelativeLayout)findViewById(R.id.menu_item_dasa);
+        final RelativeLayout itemCatego = (RelativeLayout)findViewById(R.id.menu_item_catego);
+
+
+        final Animation rotateButton = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatebutton);
+        final Animation showElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.showmenu);
+
+        final Animation showElementsDasa = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.showmenudasa);
+        final Animation hideElementsDasa = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.hidemenudasa);
+
+
+        final Animation rotateButtonBack = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatebuttonback);
+        final Animation hideElements = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.hidemenu);
+
+
+
+
+        if (backgroundMenu.getVisibility() == View.INVISIBLE){
+            backgroundMenu.startAnimation(showElements);
+            itemDasa.startAnimation(showElementsDasa);
+            itemCatego.startAnimation(showElementsDasa);
+            fab.startAnimation(rotateButton);
+        }
+        else {
+            backgroundMenu.startAnimation(hideElements);
+            itemDasa.startAnimation(hideElementsDasa);
+            itemCatego.startAnimation(hideElementsDasa);
+            fab.startAnimation(rotateButtonBack);
+        }
+
+        AnimationListener entrada = new AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                backgroundMenu.setVisibility(View.VISIBLE);
+                itemDasa.setVisibility(View.VISIBLE);
+                itemCatego.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) { }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) { }
+        };
+
+        AnimationListener salida = new AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) { }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                backgroundMenu.setVisibility(View.INVISIBLE);
+                itemDasa.setVisibility(View.INVISIBLE);
+                itemCatego.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) { }
+        };
+
+        rotateButton.setAnimationListener(entrada);
+        showElements.setAnimationListener(entrada);
+        showElementsDasa.setAnimationListener(entrada);
+
+        rotateButtonBack.setAnimationListener(salida);
+        hideElements.setAnimationListener(salida);
+        hideElementsDasa.setAnimationListener(salida);
+    }
 
 
     @Override
