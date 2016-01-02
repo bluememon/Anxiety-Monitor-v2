@@ -69,8 +69,13 @@
     <string name="dasa_label_8_3">Dificultad extrema</string>
     <string name="title_activity_login_principal">Sign in</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <!-- Labels para agregar reporte Crisis español -->
+    <string name="title_activity_add_catego">Reporte de Crisis</string>
+    <string name="catego_label_1">Categoría relacionada</string>
+    <string name="catego_label_2">Severidad de Crisis</string>
+    <string name="catego_label_2_1">Ligera</string>
+    <string name="catego_label_2_2">Regular</string>
+    <string name="catego_label_2_3">Severa</string>
+    <string name="catego_label_3">Detalle de Crisis</string>
 
 </resources>

@@ -7,7 +7,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     //pointer to fab button
     android.support.design.widget.FloatingActionButton fab;
     com.github.clans.fab.FloatingActionButton fabDasa;
+    com.github.clans.fab.FloatingActionButton fabCatego;
     RelativeLayout backgroundMenu;
 
 
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         fab = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
         fabDasa =  (com.github.clans.fab.FloatingActionButton)findViewById(R.id.fabDasa);
+        fabCatego =  (com.github.clans.fab.FloatingActionButton)findViewById(R.id.fabCatego);
         backgroundMenu =  (RelativeLayout)findViewById(R.id.backgroundViewMenu);
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +144,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 agregarDASA(idPaciente);
+            }
+        });
+
+        fabCatego.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregarCatego(idPaciente);
             }
         });
     }
@@ -299,6 +307,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void agregarDASA (String idPaciente) {
         Intent intent = new Intent(this, add_dasa.class);
+        intent.putExtra(EXTRA_MESSAGE, idPaciente);
+        startActivity(intent);
+    }
+
+    public void agregarCatego (String idPaciente) {
+        Intent intent = new Intent(this, add_catego.class);
         intent.putExtra(EXTRA_MESSAGE, idPaciente);
         startActivity(intent);
     }
