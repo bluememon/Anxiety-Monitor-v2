@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             card_view:cardCornerRadius="4dp"
             card_view:cardUseCompatPadding="true"
-            android:elevation="14dp">
+            android:elevation="14dp"
+            android:focusableInTouchMode="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -226,7 +227,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:ems="10"
                         android:id="@+id/catego_detalle"
                         android:hint="Breve descriptcion del episodio de crisis"
                         android:isScrollContainer="true" />
