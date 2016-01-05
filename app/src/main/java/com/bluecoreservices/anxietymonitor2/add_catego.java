@@ -1,8 +1,10 @@
 package com.bluecoreservices.anxietymonitor2;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,13 +12,17 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -70,9 +76,9 @@ public class add_catego extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer resSeveridad = Math.round(elmSeveridad.getProgress()/100);
+                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 100);
 
-                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(),
                         InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
@@ -85,14 +91,81 @@ public class add_catego extends AppCompatActivity {
         Button addCategoria = (Button) findViewById(R.id.add_catego_nombre);
         addCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
-        public void onClick(View view) {
+            public void onClick(View view) {
 
-                addCatego();
+                //addCatego();
+                openCategoDialog();
             }
         });
 
         //Inicializacion de las categorías
         getCategos();
+    }
+
+    private void openCategoDialog() {
+        //inicializacion del mensaje
+        AlertDialog.Builder builder = new AlertDialog.Builder(add_catego.this);
+
+        LinearLayout inputWrapper = new LinearLayout(this);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(30, 0, 30, 0);
+
+        final EditText input = new EditText(add_catego.this);
+        inputWrapper.addView(input, lp);
+
+        //Titulo y Mensaje
+        builder.setMessage(R.string.new_catego_dialog_message)
+                .setTitle(R.string.new_catego_dialog_title)
+                .setView(inputWrapper);
+
+        //Botones
+        builder.setPositiveButton(R.string.new_catego_dialog_okbutton, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                Log.i(PAGINA_DEBUG, "OK Presionado");
+                Log.i(PAGINA_DEBUG, "Valor del Input: " + input.getText().toString());
+                addCatego(input.getText().toString());
+            }
+        });
+        builder.setNegativeButton(R.string.new_catego_dialog_cancelbutton, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+                Log.i(PAGINA_DEBUG, "Cancelar Presionado");
+            }
+        });
+
+
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+        input.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Integer temp = input.length();
+                if (temp > 0){
+                    dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(true);
+                }
+                else {
+                    dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+
     }
 
     private void getCategos() {
@@ -193,6 +266,9 @@ public class add_catego extends AppCompatActivity {
                 ArrayList<String> nombres = new ArrayList<String>();
                 final ArrayList<String> ids = new ArrayList<String>();
 
+                ArrayAdapter adapter = new ArrayAdapter(add_catego.this, android.R.layout.simple_spinner_item, nombres);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
                 if (listSize > 0){
                     nombres.clear();
                     adapter.notifyDataSetChanged();
@@ -209,8 +285,6 @@ public class add_catego extends AppCompatActivity {
                         nombres.add(categoriaElemento.getString("nombre"));
                         ids.add(categoriaElemento.getString("id"));
                     }
-                    ArrayAdapter adapter = new ArrayAdapter(add_catego.this, android.R.layout.simple_spinner_item, nombres);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                     listaCatego.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
@@ -238,7 +312,7 @@ public class add_catego extends AppCompatActivity {
         la.execute();
     }
 
-    private void addCatego() {
+    private void addCatego(String categoName) {
 
         class LoginAsync  extends AsyncTask<String, Void, JSONObject> {
             private Dialog loadingDialog;
@@ -263,11 +337,14 @@ public class add_catego extends AppCompatActivity {
             protected JSONObject doInBackground(String... params) {
 
                 String uname = idPaciente;
+                String cname = params[0];
 
                 sbParams = new StringBuilder();
 
                 try {
                     sbParams.append("idPaciente").append("=").append(URLEncoder.encode(uname, charset));
+                    sbParams.append("&");
+                    sbParams.append("nuevaCatego").append("=").append(URLEncoder.encode(cname, charset));
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -329,56 +406,11 @@ public class add_catego extends AppCompatActivity {
                 Log.i(PAGINA_DEBUG, result.toString());
                 loadingDialog.dismiss();
 
-                Spinner listaCatego = (Spinner)findViewById(R.id.spinner_catego);
-                Integer listSize = listaCatego.getCount() -1;
-
-                JSONArray categoriaLista = null;
-                ArrayList<String> nombres = new ArrayList<String>();
-                final ArrayList<String> ids = new ArrayList<String>();
-
-                if (listSize > 0){
-                    nombres.clear();
-                    adapter.notifyDataSetChanged();
-                }
-
-                try {
-                    categoriaLista = result.getJSONArray("categorias");
-
-
-                    for (int i = 0; i < categoriaLista.length(); i++){
-
-                        JSONObject categoriaElemento = categoriaLista.getJSONObject(i);
-
-                        nombres.add(categoriaElemento.getString("nombre"));
-                        ids.add(categoriaElemento.getString("id"));
-                    }
-                    ArrayAdapter adapter = new ArrayAdapter(add_catego.this, android.R.layout.simple_spinner_item, nombres);
-                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-                    listaCatego.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
-
-                    listaCatego.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-                        @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            selectedCatego = ids.get(position);
-                            Log.i(PAGINA_DEBUG, selectedCatego);
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
-                    });
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                getCategos();
             }
         }
         LoginAsync la = new LoginAsync();
-        la.execute();
+        la.execute(categoName);
     }
 
     private void addReporte(final String selectedCategoNum, final String severidadValue, final String informacionText) {

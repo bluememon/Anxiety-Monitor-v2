@@ -80,4 +80,9 @@
     <string name="catego_result_insert_positive">Reporte agregado, Gracias!</string>
     <string name="catego_result_insert_negative">Hubo un error en el reporte :(</string>
 
+    <string name="new_catego_dialog_message">Escribe un nombre para la nueva categoría</string>
+    <string name="new_catego_dialog_title">Nueva Categoría</string>
+    <string name="new_catego_dialog_okbutton">Agregar</string>
+    <string name="new_catego_dialog_cancelbutton">Cancelar</string>
+
 </resources>

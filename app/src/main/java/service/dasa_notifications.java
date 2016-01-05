@@ -102,7 +102,8 @@ public class dasa_notifications extends Service {
                 .setContentTitle("Anxiety Monitor")
                 .setContentText("Recordatorio para llenar el diario")
                 .setContentIntent(contentIntent)
-                .setAutoCancel(true);
+                .setAutoCancel(true)
+                .setSmallIcon(R.drawable.am_alert_logo);
 
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
