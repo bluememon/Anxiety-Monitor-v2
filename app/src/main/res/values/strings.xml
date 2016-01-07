@@ -9,6 +9,8 @@
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_in_short">Entrar</string>
 
+    <!-- Labels para los settings del menu principal -->
+    <string name="action_settings_principal">Log out...</string>
 
     <!-- Labels para agregar terapeuta español -->
     <string name="add_therapist_sub_title">Agregar Terapeuta</string>

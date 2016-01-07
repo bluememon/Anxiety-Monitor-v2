@@ -31,6 +31,7 @@ import layout.fragment_main_dasa;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
+    public final static String PAGINA_DEBUG = "main_activity";
     public static String idPaciente;
     SharedPreferences sharedPref;
     Boolean isPatient = false;
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             //agregar iconno de home
-            getSupportActionBar().setIcon(R.drawable.am_action_icon);
+            getSupportActionBar().setIcon(R.mipmap.am_launcher);
         }
 
         // Create the adapter that will return a fragment for each of the three
@@ -241,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Integer temp = item.getItemId();
         switch (item.getItemId()) {
             case android.R.id.home:
                 // This is called when the Home (Up) button is pressed in the action bar.
@@ -260,6 +262,9 @@ public class MainActivity extends AppCompatActivity {
                     // navigate up to the hierarchical parent activity.
                     NavUtils.navigateUpTo(this, upIntent);
                 }
+                return true;
+            case R.id.action_settings_logout:
+                Log.e(PAGINA_DEBUG, "logout");
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -294,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override

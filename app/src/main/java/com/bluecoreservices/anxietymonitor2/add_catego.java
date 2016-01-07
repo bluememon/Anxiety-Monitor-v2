@@ -76,7 +76,7 @@ public class add_catego extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 100);
+                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
 
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(),
@@ -92,8 +92,6 @@ public class add_catego extends AppCompatActivity {
         addCategoria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //addCatego();
                 openCategoDialog();
             }
         });

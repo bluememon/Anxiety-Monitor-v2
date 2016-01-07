@@ -80,17 +80,6 @@ public class login_principal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPref = getSharedPreferences("userPref", 0);
-
-        if (sharedPref.getString("logged", null) != null) {
-            Log.i("logged", sharedPref.getString("logged", ""));
-            Log.i("id", sharedPref.getString("id", ""));
-            Log.i("firstName", sharedPref.getString("firstName", ""));
-            Log.i("lastName", sharedPref.getString("lastName", ""));
-            Log.i("type", sharedPref.getString("type", ""));
-
-            sendToLandingPage(sharedPref.getString("type", ""));
-        }
 
         setContentView(R.layout.activity_login_principal);
 
@@ -110,6 +99,21 @@ public class login_principal extends AppCompatActivity {
 
         startService(new Intent(this, dasa_notifications.class));
 
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        sharedPref = getSharedPreferences("userPref", 0);
+
+        if (sharedPref.getString("logged", null) != null) {
+            Log.i("logged", sharedPref.getString("logged", ""));
+            Log.i("id", sharedPref.getString("id", ""));
+            Log.i("firstName", sharedPref.getString("firstName", ""));
+            Log.i("lastName", sharedPref.getString("lastName", ""));
+            Log.i("type", sharedPref.getString("type", ""));
+
+            sendToLandingPage(sharedPref.getString("type", ""));
+        }
     }
 
     public void sendToLandingPage(String position) {
