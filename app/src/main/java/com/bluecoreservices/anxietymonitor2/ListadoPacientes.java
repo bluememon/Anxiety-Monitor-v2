@@ -15,6 +15,8 @@ package com.bluecoreservices.anxietymonitor2;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.Toolbar;
         import android.util.Log;
+        import android.view.Menu;
+        import android.view.MenuItem;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.ListView;
@@ -92,8 +94,8 @@ public class ListadoPacientes extends AppCompatActivity {
         setContentView(R.layout.activity_listado_pacientes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("Anxiety Monitor");
-        toolbar.setSubtitle("Listado Pacientes");
+        getSupportActionBar().setTitle(getString(R.string.patients_title));
+        getSupportActionBar().setSubtitle(getString(R.string.app_name));
 
         //Aquí agregamos la flecha de regreso solamente si es usuario tipo administrador
         if (isAdmin) {
@@ -116,8 +118,6 @@ public class ListadoPacientes extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.pacientes_lista);
         lista = (ListView)findViewById(R.id.pacientes_lista);
-        headerView = View.inflate(this, R.layout.header_listado_pacientes, null);
-        lista.addHeaderView(headerView, null, false);
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -140,6 +140,32 @@ public class ListadoPacientes extends AppCompatActivity {
                                     }
                                 }
         );
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings_logout) {
+            sharedPref = getSharedPreferences("userPref", 0);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.clear();
+            editor.commit();
+
+            this.finishAffinity();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void cargarDatos() {
@@ -230,8 +256,6 @@ public class ListadoPacientes extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
-                    position -= lista.getHeaderViewsCount();
-
                     abrirPrincipal(patientsList.get((position)).get("id"), patientsList.get((position)).get("fullName"));
 
                 }

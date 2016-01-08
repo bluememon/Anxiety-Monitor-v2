@@ -3,6 +3,7 @@ package com.bluecoreservices.anxietymonitor2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -65,7 +66,7 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class login_principal extends AppCompatActivity {
-
+    public final static String PAGINA_DEBUG = "login_principal";
     SharedPreferences sharedPref;
 
 
@@ -101,7 +102,7 @@ public class login_principal extends AppCompatActivity {
 
     }
     @Override
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         sharedPref = getSharedPreferences("userPref", 0);
 
@@ -116,7 +117,7 @@ public class login_principal extends AppCompatActivity {
         }
     }
 
-    public void sendToLandingPage(String position) {
+    private void sendToLandingPage(String position) {
         Intent intent = null;
         Log.e("tipo actual", position);
         switch (position) {

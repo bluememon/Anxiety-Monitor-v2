@@ -280,13 +280,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.action_settings_logout:
-                    Log.e(PAGINA_DEBUG, "logout");
                     sharedPref = getSharedPreferences("userPref", 0);
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.clear();
                     editor.commit();
 
-                    System.exit(0);
+                    this.finishAffinity();
                 return true;
         }
         return super.onOptionsItemSelected(item);

@@ -2,6 +2,8 @@
     <!-- strings generales español -->
     <string name="app_name">Anxiety Monitor</string>
     <string name="action_settings">Settings</string>
+    <string name="patients_title">Listado Pacientes</string>
+    <string name="therapist_title">Listado Terapeutas</string>
 
     <!-- Labels del login en español -->
     <string name="user_username">Nombre de Usuario</string>
