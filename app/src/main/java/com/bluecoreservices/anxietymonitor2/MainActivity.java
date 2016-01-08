@@ -8,6 +8,7 @@ import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
     public final static String PAGINA_DEBUG = "main_activity";
     public static String idPaciente;
+    public static String nombrePaciente;
     SharedPreferences sharedPref;
     Boolean isPatient = false;
 
@@ -72,36 +74,43 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Main Activity: type", sharedPref.getString("type", ""));
 
             Intent intent = getIntent();
+            Bundle extras = intent.getExtras();
             switch (sharedPref.getString("type", "")) {
                 case "1":
-                    // Obtener el id de la lista de terapeutas
-                    if (intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE) != null){
-                        SharedPreferences.Editor editor= sharedPref.edit();
-                        editor.putString("idPaciente", intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE));
-                        editor.commit();
+                        // Obtener el id de la lista de terapeutas
+                        if (extras != null){
+                            idPaciente = extras.getString("EXTRA_MESSAGE");
+                            nombrePaciente = extras.getString("EXTRA_MESSAGE_NAME");
 
-                        idPaciente = intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
-                    }
-                    else {
-                        idPaciente = sharedPref.getString("idPaciente", "");
-                    }
+                            Log.i(PAGINA_DEBUG, "idPaciente: " + idPaciente);
+                            Log.i(PAGINA_DEBUG, "nombrePaciente: " + nombrePaciente);
+
+                            SharedPreferences.Editor editor= sharedPref.edit();
+                            editor.putString("idPaciente", idPaciente);
+                            editor.commit();
+
+                        }
+                        else {
+                            idPaciente = sharedPref.getString("idPaciente", "");
+                        }
                     break;
                 case "2":
-                    //Obtener el id del terapeuta de las preferencias
-                    if (intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE) != null){
-                        SharedPreferences.Editor editor= sharedPref.edit();
-                        editor.putString("idPaciente", intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE));
-                        editor.commit();
+                        //Obtener el id del terapeuta de las preferencias
+                        if (extras != null){
+                            idPaciente = extras.getString("EXTRA_MESSAGE");
+                            nombrePaciente = extras.getString("EXTRA_MESSAGE_NAME");
 
-                        idPaciente = intent.getStringExtra(ListadoPacientes.EXTRA_MESSAGE);
-                    }
-                    else {
-                        idPaciente = sharedPref.getString("idPaciente", "");
-                    }
+                            SharedPreferences.Editor editor= sharedPref.edit();
+                            editor.putString("idPaciente", idPaciente);
+                            editor.commit();
+                        }
+                        else {
+                            idPaciente = sharedPref.getString("idPaciente", "");
+                        }
                     break;
                 case "3":
-                    idPaciente = sharedPref.getString("userId", "");
-                    isPatient = true;
+                        idPaciente = sharedPref.getString("userId", "");
+                        isPatient = true;
                     break;
             }
         }
@@ -112,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (!isPatient) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(nombrePaciente);
+            getSupportActionBar().setSubtitle("Anxiety Monitor");
         }
         else {
             //agregar iconno de home
@@ -129,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        //Aquí configuramos el menu principal
         fab = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
         fabDasa =  (com.github.clans.fab.FloatingActionButton)findViewById(R.id.fabDasa);
         fabCatego =  (com.github.clans.fab.FloatingActionButton)findViewById(R.id.fabCatego);
@@ -160,6 +172,10 @@ public class MainActivity extends AppCompatActivity {
                 agregarCatego(idPaciente);
             }
         });
+
+        if (sharedPref.getString("type", "") != "3") {
+            fab.hide();
+        }
     }
 
     public void animateMenu() {
@@ -264,7 +280,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.action_settings_logout:
-                Log.e(PAGINA_DEBUG, "logout");
+                    Log.e(PAGINA_DEBUG, "logout");
+                    sharedPref = getSharedPreferences("userPref", 0);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.clear();
+                    editor.commit();
+
+                    System.exit(0);
                 return true;
         }
         return super.onOptionsItemSelected(item);

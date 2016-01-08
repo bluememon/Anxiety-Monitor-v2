@@ -31,6 +31,7 @@ package com.bluecoreservices.anxietymonitor2;
 
 public class ListadoPacientes extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
+    public final static String EXTRA_MESSAGE_NAME = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
     public final static String EXTRA_MESSAGE_TERAPEUTA = "com.bluecoreservices.anxietymonitor2.ID_TERAPEUTA";
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -231,7 +232,7 @@ public class ListadoPacientes extends AppCompatActivity {
                                         int position, long id) {
                     position -= lista.getHeaderViewsCount();
 
-                    abrirPrincipal(patientsList.get((position)).get("id"));
+                    abrirPrincipal(patientsList.get((position)).get("id"), patientsList.get((position)).get("fullName"));
 
                 }
             });
@@ -243,9 +244,12 @@ public class ListadoPacientes extends AppCompatActivity {
 
     }
 
-    public void abrirPrincipal(String idPaciente) {
+    public void abrirPrincipal(String idPaciente, String NombrePaciente) {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, idPaciente);
+        Bundle extras = new Bundle();
+            extras.putString("EXTRA_MESSAGE", idPaciente);
+            extras.putString("EXTRA_MESSAGE_NAME", NombrePaciente);
+        intent.putExtras(extras);
         startActivity(intent);
     }
 
