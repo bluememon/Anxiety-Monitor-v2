@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.bluecoreservices.anxietymonitor2.JSONParser;
 import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
@@ -41,6 +43,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -348,6 +351,11 @@ public class fragment_main_catego extends Fragment {
             StringBuilder sbParams;
             String paramsString;
 
+            TextView categoDate;
+            TextView categoName;
+            TextView categoSeverity;
+            TextView categoDetails;
+
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
@@ -424,10 +432,11 @@ public class fragment_main_catego extends Fragment {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                 // Get the layout inflater
                 LayoutInflater inflater = getActivity().getLayoutInflater();
+                final View dialogBody = inflater.inflate(R.layout.dialog_catego_detail_body, null);
 
                 //Titulo y Mensaje
                 builder.setTitle(R.string.view_catego_dialog_title)
-                        .setView(inflater.inflate(R.layout.dialog_catego_detail_body, null));
+                        .setView(dialogBody);
                 //.setView(inputWrapper);
 
                 //Botones
@@ -455,6 +464,19 @@ public class fragment_main_catego extends Fragment {
 
                 try {
                     categoriaLista = result.getJSONArray("categoInfo");
+                    JSONObject categoriaElemento = categoriaLista.getJSONObject(0);
+                    Log.i(PAGINA_DEBUG, categoriaLista.toString());
+
+                    categoName = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
+                    categoSeverity = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catSeverity);
+                    categoDetails = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catDetails);
+                    categoDate = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
+
+                    categoName.setText(categoriaElemento.getString("categoria"));
+                    categoSeverity.setText(categoriaElemento.getString("severidad"));
+                    categoDetails.setText(categoriaElemento.getString("informacion"));
+                    categoDate.setText(categoriaElemento.getString("fecha"));
+
 
                     final AlertDialog dialog = builder.create();
                     dialog.show();

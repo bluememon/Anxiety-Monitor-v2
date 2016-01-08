@@ -87,7 +87,6 @@ public class listadoTerapeutas extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.terapeutas_lista);
         lista = (ListView)findViewById(R.id.terapeutas_lista);
-        headerView = View.inflate(this, R.layout.header_listado_terapeutas, null);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
 
