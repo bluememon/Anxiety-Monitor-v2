@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (sharedPref.getString("type", "") != "3") {
+        if (!sharedPref.getString("type", "").equals("3")) {
             fab.hide();
         }
     }
