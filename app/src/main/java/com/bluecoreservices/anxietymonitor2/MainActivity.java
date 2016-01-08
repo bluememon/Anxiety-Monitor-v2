@@ -2,6 +2,9 @@ package com.bluecoreservices.anxietymonitor2;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
@@ -280,12 +283,37 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.action_settings_logout:
-                    sharedPref = getSharedPreferences("userPref", 0);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.clear();
-                    editor.commit();
 
-                    this.finishAffinity();
+                //inicializacion del mensaje
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                //Titulo y Mensaje
+                builder.setMessage(R.string.logout_dialog_message)
+                        .setTitle(R.string.logout_dialog_title);
+                //.setView(inputWrapper);
+
+                //Botones
+                builder.setPositiveButton(R.string.logout_dialog_okbutton, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                        Log.i(PAGINA_DEBUG, "OK Presionado");
+                        sharedPref = getSharedPreferences("userPref", 0);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.clear();
+                        editor.commit();
+
+                        finishAffinity();
+                    }
+                });
+                builder.setNegativeButton(R.string.logout_dialog_cancelbutton, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                        Log.i(PAGINA_DEBUG, "Cancelar Presionado");
+                    }
+                });
+
+                final AlertDialog dialog = builder.create();
+                dialog.show();
                 return true;
         }
         return super.onOptionsItemSelected(item);

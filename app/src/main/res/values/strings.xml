@@ -89,4 +89,15 @@
     <string name="new_catego_dialog_okbutton">Agregar</string>
     <string name="new_catego_dialog_cancelbutton">Cancelar</string>
 
+
+    //labels para modal categoria
+    <string name="view_catego_dialog_title">Entrada Crisis</string>
+    <string name="view_catego_dialog_cancelbutton">Cerrar</string>
+
+    //labels para borrar los datos
+    <string name="logout_dialog_title">Logout</string>
+    <string name="logout_dialog_message">Se borraran los datos del usuario y se cerrara la aplicación</string>
+    <string name="logout_dialog_okbutton">Logout</string>
+    <string name="logout_dialog_cancelbutton">Cancelar</string>
+
 </resources>

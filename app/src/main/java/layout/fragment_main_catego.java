@@ -1,7 +1,11 @@
 package layout;
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -14,8 +18,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 
 import com.bluecoreservices.anxietymonitor2.JSONParser;
 import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
@@ -34,11 +42,21 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class fragment_main_catego extends Fragment {
+    public final static String PAGINA_DEBUG = "fragment_main_catego";
     private SwipeRefreshLayout swipeRefreshLayout;
     View view;
     PieChart pieChart;
@@ -63,10 +81,8 @@ public class fragment_main_catego extends Fragment {
         categosList = new ArrayList<HashMap<String, String>>();
         idPaciente = MainActivity.idPaciente;
 
-        Log.e("main id paciente", idPaciente);
         dasaURL += idPaciente;
         dasaURLLista += idPaciente;
-        Log.i("urlcompleto_catego", dasaURL);
     }
 
     @Override
@@ -74,17 +90,14 @@ public class fragment_main_catego extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_main_catego, container, false);
-        //View headerView = View.inflate(getActivity(), R.layout.catego_chart, null);
         pieChart = (PieChart) view.findViewById(R.id.chartCatego);
         lista = (ListView) view.findViewById(R.id.categos_lista);
-        //lista.addHeaderView(headerView, null, false);
 
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.fragment_main_catego_swipe);
 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // what you want to happen onRefresh goes here
                 generateCategoChart();
             }
         });
@@ -96,17 +109,16 @@ public class fragment_main_catego extends Fragment {
         swipeRefreshLayout.post(new Runnable() {
                                     @Override
                                     public void run() {
-                swipeRefreshLayout.setRefreshing(true);
-                generateCategoChart();
-            }
-        }
+                                        swipeRefreshLayout.setRefreshing(true);
+                                        generateCategoChart();
+                                    }
+                                }
         );
 
         return view;
     }
 
     public void generateCategoChart() {
-        Log.i("fragmento", "generando grafica");
         cargarDatos();
     }
 
@@ -116,12 +128,10 @@ public class fragment_main_catego extends Fragment {
         NetworkInfo infoNetwork = connex.getActiveNetworkInfo();
 
         if (infoNetwork != null && infoNetwork.isConnected()) {
-            Log.i("JSON_Catego", dasaURL);
             new obtenerDatosGrafica().execute(dasaURL);
             new obtenerDatosLista().execute(dasaURLLista);
-            Log.i("JSON_Catego", "Corriendo el url");
         } else {
-            Log.e("JSON_Catego", "No Conectó!!");
+            Log.e(PAGINA_DEBUG, "No Conectó!!");
         }
 
     }
@@ -147,100 +157,100 @@ public class fragment_main_catego extends Fragment {
             procesaJSON(result);
             swipeRefreshLayout.setRefreshing(false);
         }
-    }
 
-    public void procesaJSON(JSONObject result) {
-        JSONObject jObj = result;
-        Log.i("JSON Catego", jObj.toString());
+        public void procesaJSON(JSONObject result) {
+            JSONObject jObj = result;
+            Log.i("JSON Catego", jObj.toString());
 
-        ArrayList<String> categoriasNombre = new ArrayList<String>();
-        ArrayList<Entry> valores = new ArrayList<Entry>();
+            ArrayList<String> categoriasNombre = new ArrayList<String>();
+            ArrayList<Entry> valores = new ArrayList<Entry>();
 
-        try {
-            JSONArray listaCategos = result.getJSONArray("lineData");
-            Log.i("JSON listaCategos", listaCategos.toString());
+            try {
+                JSONArray listaCategos = result.getJSONArray("lineData");
+                Log.i("JSON listaCategos", listaCategos.toString());
 
-            Float f;
+                Float f;
 
-            for (int i = 0; i < listaCategos.length(); i++) {
+                for (int i = 0; i < listaCategos.length(); i++) {
 
-                JSONObject t = listaCategos.getJSONObject(i);
-                String tempStr = t.getString("y");
+                    JSONObject t = listaCategos.getJSONObject(i);
+                    String tempStr = t.getString("y");
 
-                f = Float.parseFloat(tempStr);
-                valores.add(new Entry(f, i));
-                categoriasNombre.add(t.getString("name"));
+                    f = Float.parseFloat(tempStr);
+                    valores.add(new Entry(f, i));
+                    categoriasNombre.add(t.getString("name"));
+                }
+
+                PieDataSet dataSet = new PieDataSet(valores, "");
+                dataSet.setSliceSpace(2f);
+                dataSet.setSelectionShift(5f);
+
+                ArrayList<Integer> colors = new ArrayList<Integer>();
+
+                for (int c : ColorTemplate.VORDIPLOM_COLORS)
+                    colors.add(c);
+
+                for (int c : ColorTemplate.JOYFUL_COLORS)
+                    colors.add(c);
+
+                for (int c : ColorTemplate.COLORFUL_COLORS)
+                    colors.add(c);
+
+                for (int c : ColorTemplate.LIBERTY_COLORS)
+                    colors.add(c);
+
+                for (int c : ColorTemplate.PASTEL_COLORS)
+                    colors.add(c);
+
+                //colors.add(ColorTemplate.getHoloBlue());
+
+                dataSet.setColors(colors);
+
+                pieChart.setUsePercentValues(true);
+                pieChart.setDescription("");
+                pieChart.setExtraOffsets(5, 10, 5, 5);
+                pieChart.setDragDecelerationFrictionCoef(0.95f);
+
+                pieChart.setDrawHoleEnabled(true);
+                pieChart.setHoleColorTransparent(true);
+
+                pieChart.setTransparentCircleColor(Color.WHITE);
+                pieChart.setTransparentCircleAlpha(110);
+
+                pieChart.setHoleRadius(48f);
+                pieChart.setTransparentCircleRadius(51f);
+
+                pieChart.setDrawCenterText(true);
+
+                pieChart.setRotationAngle(0);
+                // enable rotation of the chart by touch
+                pieChart.setRotationEnabled(true);
+                pieChart.setHighlightPerTapEnabled(true);
+                pieChart.setDrawSliceText(false);
+
+                pieChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
+
+                Legend l = pieChart.getLegend();
+                l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+                l.setXEntrySpace(7f);
+                l.setYEntrySpace(0f);
+                l.setYOffset(0f);
+
+
+                PieData data = new PieData(categoriasNombre, dataSet);
+                data.setValueFormatter(new PercentFormatter());
+                data.setValueTextSize(11f);
+
+                pieChart.setData(data);
+
+                // undo all highlights
+                pieChart.highlightValues(null);
+
+                pieChart.invalidate();
+
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-
-            PieDataSet dataSet = new PieDataSet(valores, "");
-            dataSet.setSliceSpace(2f);
-            dataSet.setSelectionShift(5f);
-
-            ArrayList<Integer> colors = new ArrayList<Integer>();
-
-            for (int c : ColorTemplate.VORDIPLOM_COLORS)
-                colors.add(c);
-
-            for (int c : ColorTemplate.JOYFUL_COLORS)
-                colors.add(c);
-
-            for (int c : ColorTemplate.COLORFUL_COLORS)
-                colors.add(c);
-
-            for (int c : ColorTemplate.LIBERTY_COLORS)
-                colors.add(c);
-
-            for (int c : ColorTemplate.PASTEL_COLORS)
-                colors.add(c);
-
-            //colors.add(ColorTemplate.getHoloBlue());
-
-            dataSet.setColors(colors);
-
-            pieChart.setUsePercentValues(true);
-            pieChart.setDescription("");
-            pieChart.setExtraOffsets(5, 10, 5, 5);
-            pieChart.setDragDecelerationFrictionCoef(0.95f);
-
-            pieChart.setDrawHoleEnabled(true);
-            pieChart.setHoleColorTransparent(true);
-
-            pieChart.setTransparentCircleColor(Color.WHITE);
-            pieChart.setTransparentCircleAlpha(110);
-
-            pieChart.setHoleRadius(48f);
-            pieChart.setTransparentCircleRadius(51f);
-
-            pieChart.setDrawCenterText(true);
-
-            pieChart.setRotationAngle(0);
-            // enable rotation of the chart by touch
-            pieChart.setRotationEnabled(true);
-            pieChart.setHighlightPerTapEnabled(true);
-            pieChart.setDrawSliceText(false);
-
-            pieChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
-
-            Legend l = pieChart.getLegend();
-            l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-            l.setXEntrySpace(7f);
-            l.setYEntrySpace(0f);
-            l.setYOffset(0f);
-
-
-            PieData data = new PieData(categoriasNombre, dataSet);
-            data.setValueFormatter(new PercentFormatter());
-            data.setValueTextSize(11f);
-
-            pieChart.setData(data);
-
-            // undo all highlights
-            pieChart.highlightValues(null);
-
-            pieChart.invalidate();
-
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
     }
 
@@ -260,7 +270,7 @@ public class fragment_main_catego extends Fragment {
             }
             return json2;
         }
-        // onPostExecute displays the results of the AsyncTask.
+
         @Override
         protected void onPostExecute(JSONObject result) {
             procesaJSONLista(result);
@@ -271,34 +281,33 @@ public class fragment_main_catego extends Fragment {
 
             snackbar.show();
         }
-    }
 
-    public void procesaJSONLista(JSONObject result) {
-        JSONObject jObj = result;
+        public void procesaJSONLista(JSONObject result) {
+            JSONObject jObj = result;
 
-        Integer listSize = lista.getCount() -1;
-        if (listSize > 0){
-            categosList.clear();
-            adapter.notifyDataSetChanged();
-        }
-        Log.i("CategoLista", jObj.toString());
-
-
-
-        try {
-            JSONArray listaCategos = result.getJSONArray("DasList");
-            Log.e("Daslist", listaCategos.toString());
-
-            for (int i = 0; i < listaCategos.length(); i++) {
-                JSONObject t = listaCategos.getJSONObject(i);
-
-                HashMap<String, String> map = new HashMap<String, String>();
-                map.put("severidad", t.getString("severidad"));
-                map.put("nombre", t.getString("nombre"));
-                map.put("moodId", t.getString("idMood"));
-
-                categosList.add(map);
+            Integer listSize = lista.getCount() -1;
+            if (listSize > 0){
+                categosList.clear();
+                adapter.notifyDataSetChanged();
             }
+            Log.i("CategoLista", jObj.toString());
+
+
+
+            try {
+                JSONArray listaCategos = result.getJSONArray("DasList");
+                Log.e("Daslist", listaCategos.toString());
+
+                for (int i = 0; i < listaCategos.length(); i++) {
+                    JSONObject t = listaCategos.getJSONObject(i);
+
+                    HashMap<String, String> map = new HashMap<String, String>();
+                    map.put("severidad", t.getString("severidad"));
+                    map.put("nombre", t.getString("nombre"));
+                    map.put("moodId", t.getString("idMood"));
+
+                    categosList.add(map);
+                }
 
                 adapter = new SimpleAdapter(getActivity(), categosList,
                         R.layout.elemento_lista_categorias,
@@ -306,11 +315,158 @@ public class fragment_main_catego extends Fragment {
                         R.id.nombre_categoria, R.id.severidad_categoria});
 
                 lista.setAdapter(adapter);
+                lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,
+                                            int position, long id) {
+                        verDetalleCatego(categosList.get((position)).get("moodId"));
+
+                    }
+                });
                 adapter.notifyDataSetChanged();
 
 
-        } catch (JSONException e) {
-            e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
+    }
+
+    private void verDetalleCatego(String categoId) {
+
+        class LoginAsync  extends AsyncTask<String, Void, JSONObject> {
+            private Dialog loadingDialog;
+            private final String url = "http://app.bluecoreservices.com/webservices/getSingleCatego.php";
+
+            String charset = "UTF-8";
+            HttpURLConnection conn;
+            DataOutputStream wr;
+            StringBuilder result = new StringBuilder();
+            URL urlObj;
+            JSONObject jObj = null;
+            StringBuilder sbParams;
+            String paramsString;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loadingDialog = ProgressDialog.show(getContext(), "Please wait", "Loading...");
+            }
+
+            @Override
+            protected JSONObject doInBackground(String... params) {
+
+                String moodId = params[0];
+
+                sbParams = new StringBuilder();
+
+                try {
+                    sbParams.append("idCatego").append("=").append(URLEncoder.encode(moodId, charset));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    urlObj = new URL(url);
+
+                    conn = (HttpURLConnection) urlObj.openConnection();
+                    conn.setDoOutput(true);
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Accept-Charset", charset);
+                    conn.setReadTimeout(10000);
+                    conn.setConnectTimeout(15000);
+
+                    conn.connect();
+
+                    paramsString = sbParams.toString();
+
+                    wr = new DataOutputStream(conn.getOutputStream());
+                    wr.writeBytes(paramsString);
+                    wr.flush();
+                    wr.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    //response from the server
+                    InputStream in = new BufferedInputStream(conn.getInputStream());
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        result.append(line);
+                    }
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                conn.disconnect();
+
+                String stringResult = result.toString().trim();
+
+                try {
+                    jObj = new JSONObject(stringResult);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                return jObj;
+            }
+
+            @Override
+            protected void onPostExecute(JSONObject result) {
+                //inicializacion del mensaje
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                // Get the layout inflater
+                LayoutInflater inflater = getActivity().getLayoutInflater();
+
+                //Titulo y Mensaje
+                builder.setTitle(R.string.view_catego_dialog_title)
+                        .setView(inflater.inflate(R.layout.dialog_catego_detail_body, null));
+                //.setView(inputWrapper);
+
+                //Botones
+                builder.setNegativeButton(R.string.view_catego_dialog_cancelbutton, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                        Log.i(PAGINA_DEBUG, "Cancelar Presionado");
+                    }
+                });
+
+                Log.i(PAGINA_DEBUG, result.toString());
+                loadingDialog.dismiss();
+
+                JSONArray categoriaLista = null;
+                ArrayList<String> nombres = new ArrayList<String>();
+                final ArrayList<String> ids = new ArrayList<String>();
+
+                //ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, nombres);
+                //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                /*if (listSize > 0){
+                    nombres.clear();
+                    adapter.notifyDataSetChanged();
+                }*/
+
+                try {
+                    categoriaLista = result.getJSONArray("categoInfo");
+
+                    final AlertDialog dialog = builder.create();
+                    dialog.show();
+
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        LoginAsync la = new LoginAsync();
+        la.execute(categoId);
     }
 }

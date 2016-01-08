@@ -41,16 +41,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac5ef754-ee5e-41c0-acb2-581d89ab0637" name="Default" comment="Agregado notificaciones genericas para paciente">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" afterPath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -97,31 +96,22 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="33" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="33" />
+              <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
               <folding>
                 <element signature="method#animateMenu#0;class#MainActivity#0" expanded="false" />
-                <element signature="docComment;class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#11835#11865#0" expanded="true" />
+                <element signature="e#11901#11929#0" expanded="true" />
+                <element signature="e#12043#12074#0" expanded="true" />
+                <element signature="e#12076#12616#0" expanded="true" />
+                <element signature="e#12615#12616#0" expanded="true" />
+                <element signature="e#12661#12696#0" expanded="true" />
+                <element signature="e#12698#12972#0" expanded="true" />
+                <element signature="e#12971#12972#0" expanded="true" />
                 <element signature="class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getPageTitle#0;class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#agregarDASA#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#agregarCatego#0;class#MainActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListadoPacientes.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6322361">
-              <caret line="257" column="64" selection-start-line="257" selection-start-column="64" selection-end-line="257" selection-end-column="64" />
-              <folding>
-                <element signature="e#3995#4029#0" expanded="true" />
-                <element signature="e#4074#4102#0" expanded="true" />
-                <element signature="method#cargarDatos#0;class#ListadoPacientes#0" expanded="false" />
-                <element signature="class#obtenerDatos#0;class#ListadoPacientes#0" expanded="false" />
-                <element signature="method#abrirPrincipal#0;class#ListadoPacientes#0" expanded="false" />
-                <element signature="method#agregarPaciente#0;class#ListadoPacientes#0" expanded="false" />
+                <element signature="e#14910#14911#0" expanded="true" />
+                <element signature="e#14940#14941#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,25 +120,62 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6037736">
-              <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+            <state vertical-scroll-proportion="-6.8301888">
+              <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listadoTerapeutas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java">
+      <file leaf-file-name="fragment_main_catego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="82" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
+              <caret line="430" column="24" selection-start-line="430" selection-start-column="24" selection-end-line="430" selection-end-column="24" />
               <folding>
-                <element signature="e#2289#2324#0" expanded="true" />
-                <element signature="e#2369#2397#0" expanded="true" />
-                <element signature="method#cargarDatos#0;class#listadoTerapeutas#0" expanded="false" />
-                <element signature="class#obtenerDatos#0;class#listadoTerapeutas#0" expanded="false" />
-                <element signature="method#abrirListaPacientes#0;class#listadoTerapeutas#0" expanded="false" />
-                <element signature="method#agregarTerapeuta#0;class#listadoTerapeutas#0" expanded="false" />
+                <element signature="e#3466#3633#0" expanded="true" />
+                <element signature="e#3632#3633#0" expanded="true" />
+                <element signature="e#4238#4239#0" expanded="true" />
+                <element signature="e#4267#4268#0" expanded="true" />
+                <element signature="class#obtenerDatosGrafica#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="e#11096#11439#0" expanded="true" />
+                <element signature="e#11438#11439#0" expanded="true" />
+                <element signature="method#onPreExecute#0;class#11662:16382" expanded="false" />
+                <element signature="method#doInBackground#0;class#11662:16382" expanded="false" />
+                <element signature="e#14844#14877#0" expanded="true" />
+                <element signature="e#15084#15124#0" expanded="true" />
+                <element signature="e#15126#15400#0" expanded="true" />
+                <element signature="e#15399#15400#0" expanded="true" />
+                <element signature="e#15608#15616#0" expanded="true" />
+                <element signature="e#15679#15687#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog_catego_detail_body.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_catego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="310" column="5" selection-start-line="168" selection-start-column="4" selection-end-line="310" selection-end-column="5" />
+              <folding>
+                <element signature="method#openCategoDialog#0;class#add_catego#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -159,9 +186,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -1758,7 +1785,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_dasa.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/fragment_main_catego.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dasa.xml" />
@@ -1767,7 +1793,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_patient.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_item_slide_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_dasa_calendar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_dasa.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/AutoStart.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_comment_24dp.xml" />
@@ -1804,11 +1829,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" />
       </list>
     </option>
   </component>
@@ -1866,6 +1893,76 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietymonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2086,93 +2183,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietymonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -2263,7 +2273,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2559,7 +2568,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.32563257" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1929" y="50" width="1870" height="991" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32563257" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1929" y="50" width="1870" height="991" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32563257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2632,42 +2641,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dasa.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39906102">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_therapist.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_therapist.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6896553">
           <caret line="141" column="70" selection-start-line="141" selection-start-column="70" selection-end-line="141" selection-end-column="70" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_person_add_24dp.xml">
@@ -2808,36 +2806,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/therapeuta_elemento_listado.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header_listado_terapeutas.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header_listado_terapeutas.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29929578">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_listado_terapeutas.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_listado_terapeutas.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add_circle.xml">
@@ -2848,14 +2846,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_catego.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="44" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/dasa_calendar.java">
@@ -2874,17 +2872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_catego.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2894,6 +2881,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_catego.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
@@ -2903,11 +2893,11 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="64" />
@@ -2918,21 +2908,11 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_dasa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="134" column="60" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41367522">
-          <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -2952,14 +2932,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/elemento_lista_categorias.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11330935">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -2974,17 +2954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09637188">
           <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding>
-            <element signature="class#obtenerDatosGrafica#0;class#fragment_main_catego#0" expanded="false" />
-            <element signature="method#procesaJSON#0;class#fragment_main_catego#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3007,36 +2976,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5677966">
           <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.720339">
           <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1440678">
           <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="51" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java">
@@ -3054,36 +3023,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6037736">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_catego.xml">
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="33" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="33" />
-          <folding>
-            <element signature="method#animateMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPageTitle#0;class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#agregarDASA#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#agregarCatego#0;class#MainActivity#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-0.09622642">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="82" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.7111111">
+          <caret line="159" column="26" selection-start-line="130" selection-start-column="12" selection-end-line="159" selection-end-column="26" />
           <folding>
-            <element signature="e#2289#2324#0" expanded="true" />
-            <element signature="e#2369#2397#0" expanded="true" />
+            <element signature="e#2427#2462#0" expanded="true" />
+            <element signature="e#2507#2535#0" expanded="true" />
+            <element signature="e#4771#4801#0" expanded="true" />
+            <element signature="e#4833#4861#0" expanded="true" />
+            <element signature="e#4963#4994#0" expanded="true" />
+            <element signature="e#4996#5496#0" expanded="true" />
+            <element signature="e#5495#5496#0" expanded="true" />
+            <element signature="e#5537#5572#0" expanded="true" />
+            <element signature="e#5574#5828#0" expanded="true" />
+            <element signature="e#5827#5828#0" expanded="true" />
             <element signature="method#cargarDatos#0;class#listadoTerapeutas#0" expanded="false" />
             <element signature="class#obtenerDatos#0;class#listadoTerapeutas#0" expanded="false" />
             <element signature="method#abrirListaPacientes#0;class#listadoTerapeutas#0" expanded="false" />
@@ -3094,16 +3059,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6322361">
-          <caret line="257" column="64" selection-start-line="257" selection-start-column="64" selection-end-line="257" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.75555557">
+          <caret line="175" column="57" selection-start-line="175" selection-start-column="57" selection-end-line="175" selection-end-column="57" />
           <folding>
-            <element signature="e#3995#4029#0" expanded="true" />
-            <element signature="e#4074#4102#0" expanded="true" />
             <element signature="method#cargarDatos#0;class#ListadoPacientes#0" expanded="false" />
             <element signature="class#obtenerDatos#0;class#ListadoPacientes#0" expanded="false" />
+            <element signature="method#procesaJSON#0;class#ListadoPacientes#0" expanded="false" />
             <element signature="method#abrirPrincipal#0;class#ListadoPacientes#0" expanded="false" />
             <element signature="method#agregarPaciente#0;class#ListadoPacientes#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="310" column="5" selection-start-line="168" selection-start-column="4" selection-end-line="310" selection-end-column="5" />
+          <folding>
+            <element signature="method#openCategoDialog#0;class#add_catego#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <folding>
+            <element signature="method#animateMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#11835#11865#0" expanded="true" />
+            <element signature="e#11901#11929#0" expanded="true" />
+            <element signature="e#12043#12074#0" expanded="true" />
+            <element signature="e#12076#12616#0" expanded="true" />
+            <element signature="e#12615#12616#0" expanded="true" />
+            <element signature="e#12661#12696#0" expanded="true" />
+            <element signature="e#12698#12972#0" expanded="true" />
+            <element signature="e#12971#12972#0" expanded="true" />
+            <element signature="class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getPageTitle#0;class#SectionsPagerAdapter#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14910#14911#0" expanded="true" />
+            <element signature="e#14940#14941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8301888">
+          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="430" column="24" selection-start-line="430" selection-start-column="24" selection-end-line="430" selection-end-column="24" />
+          <folding>
+            <element signature="e#3466#3633#0" expanded="true" />
+            <element signature="e#3632#3633#0" expanded="true" />
+            <element signature="e#4238#4239#0" expanded="true" />
+            <element signature="e#4267#4268#0" expanded="true" />
+            <element signature="class#obtenerDatosGrafica#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="e#11096#11439#0" expanded="true" />
+            <element signature="e#11438#11439#0" expanded="true" />
+            <element signature="method#onPreExecute#0;class#11662:16382" expanded="false" />
+            <element signature="method#doInBackground#0;class#11662:16382" expanded="false" />
+            <element signature="e#14844#14877#0" expanded="true" />
+            <element signature="e#15084#15124#0" expanded="true" />
+            <element signature="e#15126#15400#0" expanded="true" />
+            <element signature="e#15399#15400#0" expanded="true" />
+            <element signature="e#15608#15616#0" expanded="true" />
+            <element signature="e#15679#15687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

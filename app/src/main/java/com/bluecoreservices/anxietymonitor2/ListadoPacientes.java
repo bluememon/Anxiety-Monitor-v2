@@ -1,7 +1,9 @@
 package com.bluecoreservices.anxietymonitor2;
 
+        import android.app.AlertDialog;
         import android.app.ProgressDialog;
         import android.content.Context;
+        import android.content.DialogInterface;
         import android.content.Intent;
         import android.content.SharedPreferences;
         import android.net.ConnectivityManager;
@@ -35,6 +37,8 @@ public class ListadoPacientes extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
     public final static String EXTRA_MESSAGE_NAME = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
     public final static String EXTRA_MESSAGE_TERAPEUTA = "com.bluecoreservices.anxietymonitor2.ID_TERAPEUTA";
+    public final static String PAGINA_DEBUG = "Listado Pacientes";
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -157,12 +161,36 @@ public class ListadoPacientes extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings_logout) {
-            sharedPref = getSharedPreferences("userPref", 0);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.clear();
-            editor.commit();
+            //inicializacion del mensaje
+            AlertDialog.Builder builder = new AlertDialog.Builder(ListadoPacientes.this);
 
-            this.finishAffinity();
+            //Titulo y Mensaje
+            builder.setMessage(R.string.logout_dialog_message)
+                    .setTitle(R.string.logout_dialog_title);
+            //.setView(inputWrapper);
+
+            //Botones
+            builder.setPositiveButton(R.string.logout_dialog_okbutton, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    Log.i(PAGINA_DEBUG, "OK Presionado");
+                    sharedPref = getSharedPreferences("userPref", 0);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.clear();
+                    editor.commit();
+
+                    finishAffinity();
+                }
+            });
+            builder.setNegativeButton(R.string.logout_dialog_cancelbutton, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                    Log.i(PAGINA_DEBUG, "Cancelar Presionado");
+                }
+            });
+
+            final AlertDialog dialog = builder.create();
+            dialog.show();
         }
 
         return super.onOptionsItemSelected(item);
