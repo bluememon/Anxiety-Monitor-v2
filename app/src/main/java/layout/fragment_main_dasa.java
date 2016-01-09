@@ -19,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -295,6 +297,7 @@ public class fragment_main_dasa extends Fragment {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
                         verDetalleDASA(dasasList.get((position)).get("idEntrada"));
+                        Log.i(PAGINA_DEBUG, dasasList.get((position)).get("idEntrada"));
 
                     }
                 });
@@ -314,7 +317,7 @@ public class fragment_main_dasa extends Fragment {
 
         class LoginAsync  extends AsyncTask<String, Void, JSONObject> {
             private Dialog loadingDialog;
-            private final String url = "http://app.bluecoreservices.com/webservices/getSingleCatego.php";
+            private final String url = "http://app.bluecoreservices.com/webservices/singleDAS-A.php";
 
             String charset = "UTF-8";
             HttpURLConnection conn;
@@ -325,10 +328,27 @@ public class fragment_main_dasa extends Fragment {
             StringBuilder sbParams;
             String paramsString;
 
-            TextView categoDate;
-            TextView categoName;
-            TextView categoSeverity;
-            TextView categoDetails;
+            TextView dialog_dasa_detail_total;
+            TextView dialog_dasa_detail_date;
+
+            TextView view_dasa_1;
+            TextView view_dasa_2;
+            TextView view_dasa_3;
+            TextView view_dasa_4;
+            TextView view_dasa_5;
+            TextView view_dasa_6;
+            TextView view_dasa_7;
+            TextView view_dasa_8;
+
+            ProgressBar view_dasa_1_seek;
+            ProgressBar view_dasa_2_seek;
+            ProgressBar view_dasa_3_seek;
+            ProgressBar view_dasa_4_seek;
+            ProgressBar view_dasa_5_seek;
+            ProgressBar view_dasa_6_seek;
+            ProgressBar view_dasa_7_seek;
+            ProgressBar view_dasa_8_seek;
+
 
             @Override
             protected void onPreExecute() {
@@ -339,12 +359,12 @@ public class fragment_main_dasa extends Fragment {
             @Override
             protected JSONObject doInBackground(String... params) {
 
-                String moodId = params[0];
+                String dasaId = params[0];
 
                 sbParams = new StringBuilder();
 
                 try {
-                    sbParams.append("idCatego").append("=").append(URLEncoder.encode(moodId, charset));
+                    sbParams.append("id").append("=").append(URLEncoder.encode(dasaId, charset));
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -421,27 +441,58 @@ public class fragment_main_dasa extends Fragment {
                     }
                 });
 
-                Log.i(PAGINA_DEBUG, result.toString());
+                Log.i(PAGINA_DEBUG, "result: " + result.toString());
                 loadingDialog.dismiss();
 
-                JSONArray categoriaLista = null;
+                JSONArray dasLista = null;
 
 
                 try {
-                    categoriaLista = result.getJSONArray("categoInfo");
-                    JSONObject categoriaElemento = categoriaLista.getJSONObject(0);
-                    Log.i(PAGINA_DEBUG, categoriaLista.toString());
+                    dasLista = result.getJSONArray("DasList");
+                    JSONObject dasElemento = dasLista.getJSONObject(0);
+                    Log.i(PAGINA_DEBUG, dasLista.toString());
 
-                    categoName = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
-                    categoSeverity = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catSeverity);
-                    categoDetails = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catDetails);
-                    categoDate = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
+                    dialog_dasa_detail_total = (TextView) dialogBody.findViewById(R.id.dialog_dasa_detail_total);
+                    dialog_dasa_detail_date = (TextView) dialogBody.findViewById(R.id.dialog_dasa_detail_date);
 
-                    categoName.setText(categoriaElemento.getString("categoria"));
-                    categoSeverity.setText(categoriaElemento.getString("severidad"));
-                    categoDetails.setText(categoriaElemento.getString("informacion"));
-                    categoDate.setText(categoriaElemento.getString("fecha"));
+                    view_dasa_1 = (TextView) dialogBody.findViewById(R.id.view_dasa_1);
+                    view_dasa_2 = (TextView) dialogBody.findViewById(R.id.view_dasa_2);
+                    view_dasa_3 = (TextView) dialogBody.findViewById(R.id.view_dasa_3);
+                    view_dasa_4 = (TextView) dialogBody.findViewById(R.id.view_dasa_4);
+                    view_dasa_5 = (TextView) dialogBody.findViewById(R.id.view_dasa_5);
+                    view_dasa_6 = (TextView) dialogBody.findViewById(R.id.view_dasa_6);
+                    view_dasa_7 = (TextView) dialogBody.findViewById(R.id.view_dasa_7);
+                    view_dasa_8 = (TextView) dialogBody.findViewById(R.id.view_dasa_8);
 
+                    view_dasa_1_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_1_seek);
+                    view_dasa_2_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_2_seek);
+                    view_dasa_3_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_3_seek);
+                    view_dasa_4_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_4_seek);
+                    view_dasa_5_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_5_seek);
+                    view_dasa_6_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_6_seek);
+                    view_dasa_7_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_7_seek);
+                    view_dasa_8_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_8_seek);
+
+                    dialog_dasa_detail_total.setText(dasElemento.getString("total"));
+                    dialog_dasa_detail_date.setText(dasElemento.getString("fechaEnvio"));
+
+                    view_dasa_1.setText(dasElemento.getString("item1"));
+                    view_dasa_2.setText(dasElemento.getString("item2"));
+                    view_dasa_3.setText(dasElemento.getString("item3"));
+                    view_dasa_4.setText(dasElemento.getString("item4"));
+                    view_dasa_5.setText(dasElemento.getString("item5"));
+                    view_dasa_6.setText(dasElemento.getString("item6"));
+                    view_dasa_7.setText(dasElemento.getString("item7"));
+                    view_dasa_8.setText(dasElemento.getString("item8"));
+
+                    view_dasa_1_seek.setProgress((Integer.parseInt(dasElemento.getString("item1"))*10));
+                    view_dasa_2_seek.setProgress((Integer.parseInt(dasElemento.getString("item2"))*10));
+                    view_dasa_3_seek.setProgress((Integer.parseInt(dasElemento.getString("item3"))*10));
+                    view_dasa_4_seek.setProgress((Integer.parseInt(dasElemento.getString("item4"))*10));
+                    view_dasa_5_seek.setProgress((Integer.parseInt(dasElemento.getString("item5"))*10));
+                    view_dasa_6_seek.setProgress((Integer.parseInt(dasElemento.getString("item6"))*10));
+                    view_dasa_7_seek.setProgress((Integer.parseInt(dasElemento.getString("item7"))*10));
+                    view_dasa_8_seek.setProgress((Integer.parseInt(dasElemento.getString("item8"))*10));
 
                     final AlertDialog dialog = builder.create();
                     dialog.show();
