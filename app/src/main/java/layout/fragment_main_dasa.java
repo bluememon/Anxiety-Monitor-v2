@@ -1,6 +1,7 @@
 package layout;
 
 
+import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -17,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -485,14 +487,55 @@ public class fragment_main_dasa extends Fragment {
                     view_dasa_7.setText(dasElemento.getString("item7"));
                     view_dasa_8.setText(dasElemento.getString("item8"));
 
-                    view_dasa_1_seek.setProgress((Integer.parseInt(dasElemento.getString("item1"))*10));
-                    view_dasa_2_seek.setProgress((Integer.parseInt(dasElemento.getString("item2"))*10));
-                    view_dasa_3_seek.setProgress((Integer.parseInt(dasElemento.getString("item3"))*10));
-                    view_dasa_4_seek.setProgress((Integer.parseInt(dasElemento.getString("item4"))*10));
-                    view_dasa_5_seek.setProgress((Integer.parseInt(dasElemento.getString("item5"))*10));
-                    view_dasa_6_seek.setProgress((Integer.parseInt(dasElemento.getString("item6"))*10));
-                    view_dasa_7_seek.setProgress((Integer.parseInt(dasElemento.getString("item7"))*10));
-                    view_dasa_8_seek.setProgress((Integer.parseInt(dasElemento.getString("item8"))*10));
+                    ObjectAnimator animProg1, animProg2, animProg3, animProg4, animProg5, animProg6, animProg7, animProg8;
+
+                    animProg1 = ObjectAnimator.ofInt(view_dasa_1_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item1")) * 10);
+                    animProg1.setDuration(1000);
+                    animProg1.setStartDelay(500L);
+                    animProg1.setInterpolator(new DecelerateInterpolator());
+                    animProg1.start();
+
+                    animProg2 = ObjectAnimator.ofInt(view_dasa_2_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item2")) * 10);
+                    animProg2.setDuration(1000);
+                    animProg2.setStartDelay(500L);
+                    animProg2.setInterpolator(new DecelerateInterpolator());
+                    animProg2.start();
+
+                    animProg3 = ObjectAnimator.ofInt(view_dasa_3_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item3")) * 10);
+                    animProg3.setDuration(1000);
+                    animProg3.setStartDelay(500L);
+                    animProg3.setInterpolator(new DecelerateInterpolator());
+                    animProg3.start();
+
+                    animProg4 = ObjectAnimator.ofInt(view_dasa_4_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item4")) * 10);
+                    animProg4.setDuration(1000);
+                    animProg4.setStartDelay(500L);
+                    animProg4.setInterpolator(new DecelerateInterpolator());
+                    animProg4.start();
+
+                    animProg5 = ObjectAnimator.ofInt(view_dasa_5_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item5")) * 10);
+                    animProg5.setDuration(1000);
+                    animProg5.setStartDelay(500L);
+                    animProg5.setInterpolator(new DecelerateInterpolator());
+                    animProg5.start();
+
+                    animProg6 = ObjectAnimator.ofInt(view_dasa_6_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item6")) * 10);
+                    animProg6.setDuration(1000);
+                    animProg6.setStartDelay(500L);
+                    animProg6.setInterpolator(new DecelerateInterpolator());
+                    animProg6.start();
+
+                    animProg7 = ObjectAnimator.ofInt(view_dasa_7_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item7")) * 10);
+                    animProg7.setDuration(1000);
+                    animProg7.setStartDelay(500L);
+                    animProg7.setInterpolator(new DecelerateInterpolator());
+                    animProg7.start();
+
+                    animProg8 = ObjectAnimator.ofInt(view_dasa_8_seek, "progress", 0, Integer.parseInt(dasElemento.getString("item8")) * 10);
+                    animProg8.setDuration(1000);
+                    animProg8.setStartDelay(500L);
+                    animProg8.setInterpolator(new DecelerateInterpolator());
+                    animProg8.start();
 
                     final AlertDialog dialog = builder.create();
                     dialog.show();
