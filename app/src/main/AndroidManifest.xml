@@ -92,6 +92,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.bluecoreservices.anxietymonitor2.MainActivity" />
         </activity>
+        <activity android:name=".breathingGame"
+            android:label="BreathinGame"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
