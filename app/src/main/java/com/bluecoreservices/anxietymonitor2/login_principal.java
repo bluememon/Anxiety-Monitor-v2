@@ -84,6 +84,18 @@ public class login_principal extends AppCompatActivity {
 
         setContentView(R.layout.activity_login_principal);
 
+        sharedPref = getSharedPreferences("userPref", 0);
+
+        if (sharedPref.getString("logged", null) != null) {
+            Log.i("logged", sharedPref.getString("logged", ""));
+            Log.i("id", sharedPref.getString("id", ""));
+            Log.i("firstName", sharedPref.getString("firstName", ""));
+            Log.i("lastName", sharedPref.getString("lastName", ""));
+            Log.i("type", sharedPref.getString("type", ""));
+
+            sendToLandingPage(sharedPref.getString("type", ""));
+        }
+
         editTextUserName = (EditText) findViewById(R.id.username);
         editTextPassword = (EditText) findViewById(R.id.password);
 

@@ -104,4 +104,17 @@
     <string name="logout_dialog_okbutton">Logout</string>
     <string name="logout_dialog_cancelbutton">Cancelar</string>
 
+    //labels para borrar los datos
+    <string name="respiration_dialog_title">Gracias!</string>
+    <string name="respiration_dialog_message">Muchas gracias por llenar el reporte.\n\nSabemos que es un proceso complicado y queremos ofrecerte un ejercicio de respiracion para relajacion.\n\nSi no deseas usarlo puedes presionar en \"Después\"</string>
+    <string name="respiration_dialog_okbutton">Entrar</string>
+    <string name="respiration_dialog_cancelbutton">Después</string>
+
+    <string name="anxiety_game_title">Respira profundo</string>
+    <string-array name="anxiety_quotes">
+        <item>I, not events, have the power to make me happy or unhappy today. I can choose which it shall be. Yesterday is dead, tomorrow hasn\'t arrived yet. I have just one day, today, and I\'m going to be happy in it.</item>
+        <item>Politics is the art of looking for trouble, finding it everywhere, diagnosing it incorrectly and applying the wrong remedies.</item>
+        <item>A black cat crossing your path signifies that the animal is going somewhere.</item>
+        <item>Humor is reason gone mad.</item>
+    </string-array>
 </resources>

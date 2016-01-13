@@ -6,4 +6,12 @@
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#727272</color>
     <color name="dividerColor">#B6B6B6</color>
+
+    <string-array name="color_array">
+        <item>#CD0300</item>
+        <item>#E15F00</item>
+        <item>#F2E66B</item>
+        <item>#0DA66B</item>
+        <item>#00796B</item>
+    </string-array>
 </resources>

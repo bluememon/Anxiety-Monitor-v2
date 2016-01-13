@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -76,14 +77,12 @@ public class add_catego extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
-
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(),
                         InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
                 if (selectedCatego != null) {
-                    addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString());
+                    openRespirationDialog();
                 }
             }
         });
@@ -148,10 +147,9 @@ public class add_catego extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 Integer temp = input.length();
-                if (temp > 0){
+                if (temp > 0) {
                     dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(true);
-                }
-                else {
+                } else {
                     dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
                 }
             }
@@ -531,5 +529,40 @@ public class add_catego extends AppCompatActivity {
         }
         LoginAsync la = new LoginAsync();
         la.execute(selectedCategoNum, severidadValue, informacionText);
+    }
+
+    private void openRespirationDialog() {
+        //inicializacion del mensaje
+        AlertDialog.Builder builder = new AlertDialog.Builder(add_catego.this);
+
+        //Titulo y Mensaje
+        builder.setMessage(R.string.respiration_dialog_message)
+                .setTitle(R.string.respiration_dialog_title);
+        //.setView(inputWrapper);
+
+        //Botones
+        builder.setPositiveButton(R.string.respiration_dialog_okbutton, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                Log.i(PAGINA_DEBUG, "OK Presionado");
+                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
+                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString());
+
+                Intent intent = new Intent(add_catego.this, breathingGame.class);
+                intent.putExtra(EXTRA_MESSAGE, idPaciente);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton(R.string.respiration_dialog_cancelbutton, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+                Log.i(PAGINA_DEBUG, "Cancelar Presionado");
+                Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
+                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString());
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
