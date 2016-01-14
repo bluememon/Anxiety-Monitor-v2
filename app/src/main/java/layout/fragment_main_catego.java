@@ -31,6 +31,7 @@ import com.bluecoreservices.anxietymonitor2.JSONParser;
 import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
 import com.bluecoreservices.anxietymonitor2.MainActivity;
 import com.bluecoreservices.anxietymonitor2.R;
+import com.bluecoreservices.anxietymonitor2.anxietyUtils;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -475,7 +476,9 @@ public class fragment_main_catego extends Fragment {
                     categoName.setText(categoriaElemento.getString("categoria"));
                     categoSeverity.setText(categoriaElemento.getString("severidad"));
                     categoDetails.setText(categoriaElemento.getString("informacion"));
-                    categoDate.setText(categoriaElemento.getString("fecha"));
+
+                    anxietyUtils.friendlyDate fDate = new anxietyUtils.friendlyDate(getContext(), categoriaElemento.getString("fecha"));
+                    categoDate.setText(fDate.getFriendlyDate());
 
 
                     final AlertDialog dialog = builder.create();

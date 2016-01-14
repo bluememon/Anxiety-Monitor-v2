@@ -22,14 +22,13 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.SeekBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.bluecoreservices.anxietymonitor2.JSONParser;
-import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
 import com.bluecoreservices.anxietymonitor2.MainActivity;
 import com.bluecoreservices.anxietymonitor2.R;
+import com.bluecoreservices.anxietymonitor2.anxietyUtils;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -55,6 +54,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import com.bluecoreservices.anxietymonitor2.anxietyUtils.friendlyDate;
+
 
 public class fragment_main_dasa extends Fragment {
 
@@ -74,10 +75,7 @@ public class fragment_main_dasa extends Fragment {
 
     ArrayList<HashMap<String, String>> dasasList;
 
-
-    public fragment_main_dasa() {
-        // Required empty public constructor
-    }
+    public fragment_main_dasa() { /*Required empty public constructor*/ }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,8 +88,7 @@ public class fragment_main_dasa extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_main_dasa, container, false);
         View headerView = View.inflate(getActivity(), R.layout.dasa_chart, null);
@@ -232,8 +229,6 @@ public class fragment_main_dasa extends Fragment {
         }
     }
 
-
-
     private class obtenerDatosLista extends AsyncTask<String, Void, JSONObject> {
         @Override
         protected void onPreExecute() { super.onPreExecute(); }
@@ -270,18 +265,20 @@ public class fragment_main_dasa extends Fragment {
                 adapter.notifyDataSetChanged();
             }
 
-            Log.i("JSON CategoLista", jObj.toString());
-
             try {
                 JSONArray listaCategos = result.getJSONArray("DasList");
-                Log.i("Dasalist", listaCategos.toString());
+
+                friendlyDate fDate;
 
                 for (int i = 0; i < listaCategos.length(); i++) {
                     JSONObject t = listaCategos.getJSONObject(i);
 
+                    fDate = new friendlyDate(getContext(), t.getString("fechaEnvio"));
+                    Long itmTotal = Math.round(Double.parseDouble(t.getString("total")));
+
                     HashMap<String, String> map = new HashMap<String, String>();
-                    map.put("total", t.getString("total"));
-                    map.put("fechaEnvio", t.getString("fechaEnvio"));
+                    map.put("total", itmTotal.toString());
+                    map.put("fechaEnvio", fDate.getFriendlyDate());
                     map.put("idEntrada", t.getString("id"));
 
                     dasasList.add(map);
@@ -312,8 +309,6 @@ public class fragment_main_dasa extends Fragment {
             }
         }
     }
-
-
 
     private void verDetalleDASA(String categoId) {
 
@@ -452,7 +447,8 @@ public class fragment_main_dasa extends Fragment {
                 try {
                     dasLista = result.getJSONArray("DasList");
                     JSONObject dasElemento = dasLista.getJSONObject(0);
-                    Log.i(PAGINA_DEBUG, dasLista.toString());
+
+                    friendlyDate fDate = new friendlyDate(getContext(), dasElemento.getString("fechaEnvio"));
 
                     dialog_dasa_detail_total = (TextView) dialogBody.findViewById(R.id.dialog_dasa_detail_total);
                     dialog_dasa_detail_date = (TextView) dialogBody.findViewById(R.id.dialog_dasa_detail_date);
@@ -475,17 +471,30 @@ public class fragment_main_dasa extends Fragment {
                     view_dasa_7_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_7_seek);
                     view_dasa_8_seek = (ProgressBar) dialogBody.findViewById(R.id.view_dasa_8_seek);
 
-                    dialog_dasa_detail_total.setText(dasElemento.getString("total"));
-                    dialog_dasa_detail_date.setText(dasElemento.getString("fechaEnvio"));
+                    Long itmTotal = Math.round(Double.parseDouble(dasElemento.getString("total")));
 
-                    view_dasa_1.setText(dasElemento.getString("item1"));
-                    view_dasa_2.setText(dasElemento.getString("item2"));
-                    view_dasa_3.setText(dasElemento.getString("item3"));
-                    view_dasa_4.setText(dasElemento.getString("item4"));
-                    view_dasa_5.setText(dasElemento.getString("item5"));
-                    view_dasa_6.setText(dasElemento.getString("item6"));
-                    view_dasa_7.setText(dasElemento.getString("item7"));
-                    view_dasa_8.setText(dasElemento.getString("item8"));
+                    dialog_dasa_detail_total.setText(itmTotal.toString());
+                    dialog_dasa_detail_date.setText(fDate.getFriendlyDate());
+
+                    Long itm1 = Math.round(Double.parseDouble(dasElemento.getString("item1")));
+                    Long itm2 = Math.round(Double.parseDouble(dasElemento.getString("item2")));
+                    Long itm3 = Math.round(Double.parseDouble(dasElemento.getString("item3")));
+                    Long itm4 = Math.round(Double.parseDouble(dasElemento.getString("item4")));
+                    Long itm5 = Math.round(Double.parseDouble(dasElemento.getString("item5")));
+                    Long itm6 = Math.round(Double.parseDouble(dasElemento.getString("item6")));
+                    Long itm7 = Math.round(Double.parseDouble(dasElemento.getString("item7")));
+                    Long itm8 = Math.round(Double.parseDouble(dasElemento.getString("item8")));
+
+
+
+                    view_dasa_1.setText(itm1.toString());
+                    view_dasa_2.setText(itm2.toString());
+                    view_dasa_3.setText(itm3.toString());
+                    view_dasa_4.setText(itm4.toString());
+                    view_dasa_5.setText(itm5.toString());
+                    view_dasa_6.setText(itm6.toString());
+                    view_dasa_7.setText(itm7.toString());
+                    view_dasa_8.setText(itm8.toString());
 
                     ObjectAnimator animProg1, animProg2, animProg3, animProg4, animProg5, animProg6, animProg7, animProg8;
 

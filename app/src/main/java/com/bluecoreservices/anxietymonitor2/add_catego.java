@@ -409,7 +409,7 @@ public class add_catego extends AppCompatActivity {
         la.execute(categoName);
     }
 
-    private void addReporte(final String selectedCategoNum, final String severidadValue, final String informacionText) {
+    private void addReporte(final String selectedCategoNum, final String severidadValue, final String informacionText, final String skip) {
 
         class LoginAsync  extends AsyncTask<String, Void, JSONObject> {
             private Dialog loadingDialog;
@@ -437,6 +437,7 @@ public class add_catego extends AppCompatActivity {
                 String categoria = params[0];
                 String severidad = params[1];
                 String informacion = params[2];
+                String skip = params[3];
 
                 sbParams = new StringBuilder();
 
@@ -448,6 +449,8 @@ public class add_catego extends AppCompatActivity {
                     sbParams.append("severidad").append("=").append(URLEncoder.encode(severidad, charset));
                     sbParams.append("&");
                     sbParams.append("informacion").append("=").append(URLEncoder.encode(informacion, charset));
+                    sbParams.append("&");
+                    sbParams.append("skip").append("=").append(URLEncoder.encode(skip, charset));
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -528,7 +531,7 @@ public class add_catego extends AppCompatActivity {
             }
         }
         LoginAsync la = new LoginAsync();
-        la.execute(selectedCategoNum, severidadValue, informacionText);
+        la.execute(selectedCategoNum, severidadValue, informacionText, skip);
     }
 
     private void openRespirationDialog() {
@@ -546,7 +549,7 @@ public class add_catego extends AppCompatActivity {
                 // User clicked OK button
                 Log.i(PAGINA_DEBUG, "OK Presionado");
                 Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
-                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString());
+                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString(), "false");
 
                 Intent intent = new Intent(add_catego.this, breathingGame.class);
                 intent.putExtra(EXTRA_MESSAGE, idPaciente);
@@ -558,7 +561,7 @@ public class add_catego extends AppCompatActivity {
                 // User cancelled the dialog
                 Log.i(PAGINA_DEBUG, "Cancelar Presionado");
                 Integer resSeveridad = Math.round(elmSeveridad.getProgress() / 10);
-                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString());
+                addReporte(selectedCatego, resSeveridad.toString(), infoTexto.getText().toString(), "true");
             }
         });
 

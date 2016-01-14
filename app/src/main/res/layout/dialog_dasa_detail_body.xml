@@ -12,14 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fecha"
-        android:layout_weight="2" />
+        android:layout_weight="2"
+        android:gravity="left|center_vertical" />
 
     <TextView
         android:id="@+id/dialog_dasa_detail_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre Categoria"
-        android:layout_weight="2"/>
+        android:layout_weight="2"
+        android:autoText="false"
+        android:gravity="center_vertical|right" />
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
