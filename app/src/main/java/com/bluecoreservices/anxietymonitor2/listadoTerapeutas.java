@@ -1,4 +1,4 @@
-package com.bluecoreservices.anxietymonitor2;
+package com.bluecoreservices.anxietymonitor;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -46,7 +46,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class listadoTerapeutas extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_TERAPEUTA";
+    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_TERAPEUTA";
     public final static String PAGINA_DEBUG = "listadoTerapeutas";
     private String urlText;
     private SwipeRefreshLayout swipeRefreshLayout;

@@ -1,4 +1,4 @@
-package com.bluecoreservices.anxietymonitor2;
+package com.bluecoreservices.anxietymonitor;
 
         import android.app.AlertDialog;
         import android.app.ProgressDialog;
@@ -34,9 +34,9 @@ package com.bluecoreservices.anxietymonitor2;
         import java.util.HashMap;
 
 public class ListadoPacientes extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
-    public final static String EXTRA_MESSAGE_NAME = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
-    public final static String EXTRA_MESSAGE_TERAPEUTA = "com.bluecoreservices.anxietymonitor2.ID_TERAPEUTA";
+    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
+    public final static String EXTRA_MESSAGE_NAME = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
+    public final static String EXTRA_MESSAGE_TERAPEUTA = "com.bluecoreservices.anxietymonitor.ID_TERAPEUTA";
     public final static String PAGINA_DEBUG = "Listado Pacientes";
 
     /**

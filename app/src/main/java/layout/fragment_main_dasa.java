@@ -25,10 +25,10 @@ import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import com.bluecoreservices.anxietymonitor2.JSONParser;
-import com.bluecoreservices.anxietymonitor2.MainActivity;
-import com.bluecoreservices.anxietymonitor2.R;
-import com.bluecoreservices.anxietymonitor2.anxietyUtils;
+import com.bluecoreservices.anxietymonitor.JSONParser;
+import com.bluecoreservices.anxietymonitor.MainActivity;
+import com.bluecoreservices.anxietymonitor.R;
+import com.bluecoreservices.anxietymonitor.anxietyUtils;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -54,7 +54,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
-import com.bluecoreservices.anxietymonitor2.anxietyUtils.friendlyDate;
+import com.bluecoreservices.anxietymonitor.anxietyUtils.friendlyDate;
 
 
 public class fragment_main_dasa extends Fragment {

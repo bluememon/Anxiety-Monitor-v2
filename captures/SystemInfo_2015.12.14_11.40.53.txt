@@ -14,23 +14,23 @@ System memory usage:
     Native: 61MB min, 62MB avg, 62MB max
 
 Per-Package Stats:
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a143 / v1:
             (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a144 / v1:
                TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
                  Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
           (Last Act): 0.15%
             (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
 
 Summary:
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
            TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
              Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
       (Last Act): 0.15%
         (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
         (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
 
 Run time Stats:
@@ -74,26 +74,26 @@ System memory usage:
     Native: 58MB min, 60MB avg, 71MB max
 
 Per-Package Stats:
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a143 / v1:
                TOTAL: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
                  Top: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
           (Last Act): 10% (17MB-30MB-44MB/15MB-28MB-42MB over 10)
             (Cached): 54% (12MB-31MB-40MB/10MB-29MB-38MB over 42)
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a144 / v1:
                TOTAL: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
                  Top: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
           (Last Act): 0.02%
             (Cached): 0.73% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
 
 Summary:
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
            TOTAL: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
              Top: 25% (3.0MB-33MB-90MB/1.6MB-31MB-79MB over 120)
       (Last Act): 10% (17MB-30MB-44MB/15MB-28MB-42MB over 10)
         (Cached): 54% (12MB-31MB-40MB/10MB-29MB-38MB over 42)
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
            TOTAL: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
              Top: 7.9% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
       (Last Act): 0.02%
@@ -141,23 +141,23 @@ System memory usage:
     Native: 61MB min, 62MB avg, 62MB max
 
 Per-Package Stats:
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a143 / v1:
             (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
-      * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
+      * com.bluecoreservices.anxietymonitor / u0a144 / v1:
                TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
                  Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
           (Last Act): 0.15%
             (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
 
 Summary:
-  * com.bluecoreservices.anxietymonitor2 / u0a144 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a144 / v1:
            TOTAL: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
              Top: 64% (5.0MB-43MB-57MB/3.5MB-39MB-52MB over 30)
       (Last Act): 0.15%
         (Cached): 5.9% (37MB-37MB-37MB/33MB-33MB-33MB over 1)
-  * com.bluecoreservices.anxietymonitor2 / u0a143 / v1:
+  * com.bluecoreservices.anxietymonitor / u0a143 / v1:
         (Cached): 27% (30MB-31MB-32MB/26MB-28MB-29MB over 4)
 
 Run time Stats:

@@ -1,4 +1,4 @@
-package com.bluecoreservices.anxietymonitor2;
+package com.bluecoreservices.anxietymonitor;
 
 import android.content.Context;
 import android.graphics.Canvas;

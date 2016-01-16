@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.bluecoreservices.anxietymonitor2.add_dasa"
+    tools:context="com.bluecoreservices.anxietymonitor.add_dasa"
     tools:showIn="@layout/activity_add_dasa">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="100dp"
+        android:paddingTop="20dp">
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_gravity="center"
@@ -58,7 +60,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_1_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -71,7 +74,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_1_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"
+                            />
                         </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -86,7 +91,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -136,7 +142,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_2_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -149,7 +156,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_2_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -164,7 +172,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -214,7 +223,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_3_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -227,7 +237,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_3_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -242,7 +253,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -292,7 +304,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_4_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -305,7 +318,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_4_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -320,7 +334,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -370,7 +385,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_5_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -383,7 +399,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_5_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -398,7 +415,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -449,7 +467,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_6_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -462,7 +481,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_6_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -477,7 +497,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -527,7 +548,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_7_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -540,7 +562,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_7_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -555,7 +578,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -605,7 +629,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_8_1"
                             android:layout_gravity="left"
-                            android:gravity="left" />
+                            android:gravity="left"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -618,7 +643,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/dasa_label_8_2"
                             android:layout_gravity="center"
-                            android:gravity="center_vertical|center_horizontal" />
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -633,7 +659,8 @@
                             android:layout_gravity="right"
                             android:elegantTextHeight="false"
                             android:focusableInTouchMode="false"
-                            android:gravity="center_vertical|right" />
+                            android:gravity="center_vertical|right"
+                            android:textSize="@dimen/small_label_size"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

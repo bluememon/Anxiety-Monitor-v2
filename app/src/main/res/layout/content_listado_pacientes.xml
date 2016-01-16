@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.bluecoreservices.anxietymonitor2.ListadoPacientes"
+    tools:context="com.bluecoreservices.anxietymonitor.ListadoPacientes"
     tools:showIn="@layout/activity_listado_pacientes"
     android:orientation="vertical"
     android:textAlignment="center"

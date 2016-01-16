@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.bluecoreservices.anxietymonitor2.add_catego"
+    tools:context="com.bluecoreservices.anxietymonitor.add_catego"
     tools:showIn="@layout/activity_add_catego"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:scrollbars="vertical">

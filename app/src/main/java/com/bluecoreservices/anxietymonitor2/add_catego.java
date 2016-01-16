@@ -1,4 +1,4 @@
-package com.bluecoreservices.anxietymonitor2;
+package com.bluecoreservices.anxietymonitor;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -47,7 +47,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class add_catego extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
+    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
     public final static String PAGINA_DEBUG = "add_catego";
     public static String idPaciente;
     public SharedPreferences sharedPref;

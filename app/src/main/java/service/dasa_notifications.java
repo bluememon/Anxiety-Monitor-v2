@@ -15,8 +15,8 @@ import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.bluecoreservices.anxietymonitor2.R;
-import com.bluecoreservices.anxietymonitor2.add_dasa;
+import com.bluecoreservices.anxietymonitor.R;
+import com.bluecoreservices.anxietymonitor.add_dasa;
 
 import org.json.JSONException;
 import org.json.JSONObject;

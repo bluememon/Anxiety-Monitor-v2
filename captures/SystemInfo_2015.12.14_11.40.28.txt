@@ -1,7 +1,7 @@
 Applications Memory Usage (kB):
 Uptime: 208696932 Realtime: 527018143
 
-** MEMINFO in pid 13149 [com.bluecoreservices.anxietymonitor2] **
+** MEMINFO in pid 13149 [com.bluecoreservices.anxietymonitor] **
                    Pss  Private  Private  Swapped     Heap     Heap     Heap
                  Total    Dirty    Clean    Dirty     Size    Alloc     Free
                 ------   ------   ------   ------   ------   ------   ------

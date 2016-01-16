@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bluecoreservices.anxietymonitor2">
+    package="com.bluecoreservices.anxietymonitor"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,10 +15,10 @@
         android:icon="@mipmap/am_launcher"
         android:label="@string/app_name"
         android:supportsRtl="false"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <service android:name="service.dasa_notifications" />
 
-        <receiver android:name="service.AutoStart">
+        <receiver android:name="service.AutoStart" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -25,61 +27,62 @@
         <activity
             android:name=".listadoTerapeutas"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.login_principal" />
+                android:value="com.bluecoreservices.anxietymonitor.login_principal" />
         </activity>
         <activity
             android:name=".ListadoPacientes"
             android:label="@string/app_name"
             android:parentActivityName=".login_principal"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.login_principal" />
+                android:value="com.bluecoreservices.anxietymonitor.login_principal" />
         </activity>
         <activity
             android:name=".MainActivity"
+            android:icon="@drawable/am_alert_logo"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:icon="@drawable/am_alert_logo">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.login_principal" />
+                android:value="com.bluecoreservices.anxietymonitor.login_principal" />
         </activity>
         <activity
             android:name=".add_therapist"
             android:label="@string/add_therapist_sub_title"
             android:parentActivityName=".listadoTerapeutas"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.listadoTerapeutas" />
+                android:value="com.bluecoreservices.anxietymonitor.listadoTerapeutas" />
         </activity>
         <activity
             android:name=".add_patient"
             android:label="@string/add_patient_sub_title"
             android:parentActivityName=".ListadoPacientes"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.ListadoPacientes" />
+                android:value="com.bluecoreservices.anxietymonitor.ListadoPacientes" />
         </activity>
         <activity
             android:name=".add_dasa"
             android:label="@string/add_dasa_sub_title"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.MainActivity" />
+                android:value="com.bluecoreservices.anxietymonitor.MainActivity" />
         </activity>
         <activity
             android:name=".login_principal"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -87,18 +90,19 @@
             android:name=".add_catego"
             android:label="@string/title_activity_add_catego"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.MainActivity" />
+                android:value="com.bluecoreservices.anxietymonitor.MainActivity" />
         </activity>
-        <activity android:name=".breathingGame"
+        <activity
+            android:name=".breathingGame"
             android:label="Breathing Game"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.bluecoreservices.anxietymonitor2.MainActivity" />
+                android:value="com.bluecoreservices.anxietymonitor.MainActivity" />
         </activity>
     </application>
 

@@ -27,11 +27,11 @@ import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.bluecoreservices.anxietymonitor2.JSONParser;
-import com.bluecoreservices.anxietymonitor2.ListadoPacientes;
-import com.bluecoreservices.anxietymonitor2.MainActivity;
-import com.bluecoreservices.anxietymonitor2.R;
-import com.bluecoreservices.anxietymonitor2.anxietyUtils;
+import com.bluecoreservices.anxietymonitor.JSONParser;
+import com.bluecoreservices.anxietymonitor.ListadoPacientes;
+import com.bluecoreservices.anxietymonitor.MainActivity;
+import com.bluecoreservices.anxietymonitor.R;
+import com.bluecoreservices.anxietymonitor.anxietyUtils;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;

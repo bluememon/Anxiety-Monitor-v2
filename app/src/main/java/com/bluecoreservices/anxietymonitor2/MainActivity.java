@@ -1,4 +1,4 @@
-package com.bluecoreservices.anxietymonitor2;
+package com.bluecoreservices.anxietymonitor;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -34,7 +34,7 @@ import layout.fragment_main_catego;
 import layout.fragment_main_dasa;
 
 public class MainActivity extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor2.ID_PACIENTE";
+    public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
     public final static String PAGINA_DEBUG = "main_activity";
     public static String idPaciente;
     public static String nombrePaciente;
@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         fabDasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                animateMenu();
                 agregarDASA(idPaciente);
             }
         });
@@ -172,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         fabCatego.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                animateMenu();
                 agregarCatego(idPaciente);
             }
         });
