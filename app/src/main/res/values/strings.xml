@@ -89,6 +89,8 @@
     <string name="new_catego_dialog_okbutton">Agregar</string>
     <string name="new_catego_dialog_cancelbutton">Cancelar</string>
 
+    <string name="no_info">No hay informacion</string>
+    <string name="detail_label">Informacion Detalle</string>
 
     //labels para modal categoria
     <string name="view_catego_dialog_title">Entrada Crisis</string>

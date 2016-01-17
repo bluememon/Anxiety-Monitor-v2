@@ -41,60 +41,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac5ef754-ee5e-41c0-acb2-581d89ab0637" name="Default" comment="Agregado notificaciones genericas para paciente">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/circleprogress_1_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/bluecoreservices/anxietymonitor2/ApplicationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/bluecoreservices/anxietymonitor2/ApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/com/bluecoreservices/anxietymonitor2/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/bluecoreservices/anxietymonitor2/ExampleUnitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/JSONParser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/SimpleDrawingView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/SimpleDrawingView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.14.txt" afterPath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.14.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.23.txt" afterPath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.23.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.28.txt" afterPath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.28.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.53.txt" afterPath="$PROJECT_DIR$/captures/SystemInfo_2015.12.14_11.40.53.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_catego.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_catego.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_dasa.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_dasa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_patient.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_patient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_breathing_game.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_breathing_game.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_listado_pacientes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_listado_pacientes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_listado_terapeutas.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_listado_terapeutas.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal_modulos.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal_modulos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_dasa.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_dasa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_patient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_patient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_therapist.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_therapist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/anxietyUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/anxietyUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/breathingGame.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/breathingGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_add_catego.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_catego.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_add_therapist.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_therapist.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_listado_pacientes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_listado_pacientes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/layout/dasa_calendar.java" afterPath="$PROJECT_DIR$/app/src/main/java/layout/dasa_calendar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/service/dasa_notifications.java" afterPath="$PROJECT_DIR$/app/src/main/java/service/dasa_notifications.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" afterPath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_dasa.java" afterPath="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_dasa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_catego.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_catego.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_catengo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_catengo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_dasa.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_dasa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_patient.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_patient.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_therapist.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_add_therapist.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_listado_terapeutas.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_listado_terapeutas.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_principal_modulos.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_principal_modulos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="anxietyMonitor2.iws" />
@@ -136,31 +95,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="dialog_catego_detail_body.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.864124">
-              <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
+            <state vertical-scroll-proportion="-4.2">
+              <caret line="62" column="71" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="71" />
               <folding>
-                <element signature="e#702#720#0" expanded="true" />
-                <element signature="e#1162#1180#0" expanded="true" />
-                <element signature="e#1521#1539#0" expanded="true" />
-                <element signature="e#1985#2003#0" expanded="true" />
-                <element signature="e#2341#2374#0" expanded="true" />
-                <element signature="e#2772#2803#0" expanded="true" />
-                <element signature="e#3196#3224#0" expanded="true" />
-                <element signature="e#3616#3634#0" expanded="true" />
-                <element signature="e#3944#3979#0" expanded="true" />
+                <element signature="e#3349#3371#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integers.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.123861566">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -169,156 +123,53 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6415094">
-              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+            <state vertical-scroll-proportion="-6.09434">
+              <caret line="92" column="30" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file leaf-file-name="fragment_main_catego.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proguard-rules.pro" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_add_dasa.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.636364">
-              <caret line="470" column="70" selection-start-line="470" selection-start-column="70" selection-end-line="470" selection-end-column="70" />
+              <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
               <folding>
-                <element signature="e#354#394#0" expanded="true" />
-                <element signature="e#734#4930#0" expanded="false" />
-                <element signature="e#1643#1662#0" expanded="true" />
-                <element signature="e#1696#1718#0" expanded="true" />
-                <element signature="e#2849#2873#0" expanded="true" />
-                <element signature="e#3028#3053#0" expanded="true" />
-                <element signature="e#3617#3641#0" expanded="true" />
-                <element signature="e#3827#3852#0" expanded="true" />
-                <element signature="e#4436#4460#0" expanded="true" />
-                <element signature="e#4760#4785#0" expanded="true" />
-                <element signature="e#4940#9048#0" expanded="false" />
-                <element signature="e#5849#5868#0" expanded="true" />
-                <element signature="e#5902#5924#0" expanded="true" />
-                <element signature="e#6999#7023#0" expanded="true" />
-                <element signature="e#7178#7203#0" expanded="true" />
-                <element signature="e#7767#7791#0" expanded="true" />
-                <element signature="e#7977#8002#0" expanded="true" />
-                <element signature="e#8554#8578#0" expanded="true" />
-                <element signature="e#8878#8903#0" expanded="true" />
-                <element signature="e#9058#13163#0" expanded="false" />
-                <element signature="e#9967#9986#0" expanded="true" />
-                <element signature="e#10020#10042#0" expanded="true" />
-                <element signature="e#11117#11141#0" expanded="true" />
-                <element signature="e#11296#11321#0" expanded="true" />
-                <element signature="e#11884#11908#0" expanded="true" />
-                <element signature="e#12094#12119#0" expanded="true" />
-                <element signature="e#12670#12694#0" expanded="true" />
-                <element signature="e#12994#13019#0" expanded="true" />
-                <element signature="e#13173#17278#0" expanded="false" />
-                <element signature="e#14082#14101#0" expanded="true" />
-                <element signature="e#14135#14157#0" expanded="true" />
-                <element signature="e#15232#15256#0" expanded="true" />
-                <element signature="e#15411#15436#0" expanded="true" />
-                <element signature="e#15999#16023#0" expanded="true" />
-                <element signature="e#16209#16234#0" expanded="true" />
-                <element signature="e#16785#16809#0" expanded="true" />
-                <element signature="e#17109#17134#0" expanded="true" />
-                <element signature="e#17288#21393#0" expanded="false" />
-                <element signature="e#18197#18216#0" expanded="true" />
-                <element signature="e#18250#18272#0" expanded="true" />
-                <element signature="e#19347#19371#0" expanded="true" />
-                <element signature="e#19526#19551#0" expanded="true" />
-                <element signature="e#20114#20138#0" expanded="true" />
-                <element signature="e#20324#20349#0" expanded="true" />
-                <element signature="e#20900#20924#0" expanded="true" />
-                <element signature="e#21224#21249#0" expanded="true" />
-                <element signature="e#22312#22331#0" expanded="true" />
-                <element signature="e#22365#22387#0" expanded="true" />
-                <element signature="e#23505#23529#0" expanded="true" />
-                <element signature="e#23684#23709#0" expanded="true" />
-                <element signature="e#24272#24296#0" expanded="true" />
-                <element signature="e#24482#24507#0" expanded="true" />
-                <element signature="e#25058#25082#0" expanded="true" />
-                <element signature="e#25382#25407#0" expanded="true" />
-                <element signature="e#25561#29666#0" expanded="false" />
-                <element signature="e#26470#26489#0" expanded="true" />
-                <element signature="e#26523#26545#0" expanded="true" />
-                <element signature="e#27620#27644#0" expanded="true" />
-                <element signature="e#27799#27824#0" expanded="true" />
-                <element signature="e#28387#28411#0" expanded="true" />
-                <element signature="e#28597#28622#0" expanded="true" />
-                <element signature="e#29173#29197#0" expanded="true" />
-                <element signature="e#29497#29522#0" expanded="true" />
-                <element signature="e#29676#33781#0" expanded="false" />
-                <element signature="e#30585#30604#0" expanded="true" />
-                <element signature="e#30638#30660#0" expanded="true" />
-                <element signature="e#31735#31759#0" expanded="true" />
-                <element signature="e#31914#31939#0" expanded="true" />
-                <element signature="e#32502#32526#0" expanded="true" />
-                <element signature="e#32712#32737#0" expanded="true" />
-                <element signature="e#33288#33312#0" expanded="true" />
-                <element signature="e#33612#33637#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#onCreate#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="method#onCreateView#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="method#cargarDatos#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="class#obtenerDatosGrafica#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+                <element signature="class#17962:18749" expanded="false" />
+                <element signature="e#18165#18699#0" expanded="true" />
+                <element signature="e#18698#18699#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+        </entry>
+      </file>
+      <file leaf-file-name="categoicon.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/categoicon.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="66" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog_dasa_detail_body.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_dasa_detail_body.xml">
+          <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.018182">
+              <caret line="28" column="45" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="45" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -329,8 +180,8 @@
       <list>
         <option value="layoutResourceFile_vertical" />
         <option value="valueResourceFile" />
-        <option value="resourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -800,6 +651,11 @@
                 <option name="description" value="Prepare com.github.clans:fab:1.6.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComGithubClansFab162Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.github.lzyzsd:circleprogress:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGithubLzyzsdCircleprogress110Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.prolificinteractive:material-calendarview:1.1.0" />
@@ -1383,6 +1239,11 @@
                 <option name="name" value="prepareComGithubClansFab162Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.github.lzyzsd:circleprogress:1.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGithubLzyzsdCircleprogress110Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.prolificinteractive:material-calendarview:1.1.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComProlificinteractiveMaterialCalendarview110Library" />
@@ -1574,7 +1435,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\Guillermo Uribe\AndroidStudioProjects\anxietyMonitor2" value="4352511777239" />
+        <entry key="C:\Users\Guillermo Uribe\AndroidStudioProjects\anxietyMonitor2" value="4352596165266" />
         <entry key="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2" value="4352689467793" />
       </map>
     </option>
@@ -1798,6 +1659,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.1.6/b036abbb61656165da99cf44898e4b9123687e65/MPAndroidChart-v2.1.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.prolificinteractive/material-calendarview/1.1.0/65ffb65e288be5731820b4f4a3c35f0d3e38d706/material-calendarview-1.1.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.clans/fab/1.6.2/645e2dd3e2a1886ac6658de45b653f051ae88b10/fab-1.6.2.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lzyzsd/circleprogress/1.1.0/3f48628d74bb32d1e365a0ea2c80ab2ed1ee8e2/circleprogress-1.1.0.aar" />
                             <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1.aar" />
                             <option value="C:/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
                           </list>
@@ -1940,7 +1802,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/layout/dasa_calendar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_circle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/service/AutoStart.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/service/check_dasa_entry.java" />
@@ -1963,7 +1824,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/values.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/animValues.xml" />
@@ -1975,22 +1835,24 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_breathing_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/add_catego.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/anxietyUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dasa.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/breathingGame.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_dasa_detail_body.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/elemento_lista_categorias.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_dasa.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_dasa.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/circular.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java" />
       </list>
     </option>
   </component>
@@ -2008,9 +1870,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="30" />
+    <option name="y" value="33" />
     <option name="width" value="1921" />
-    <option name="height" value="1050" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2057,174 +1919,10 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches">
         <subPane />
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anxietyMonitor2" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="build">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="anxietyMonitor2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="anxietyMonitor2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2441,6 +2139,148 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="build">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="anxietyMonitor2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="anxietyMonitor2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anxietyMonitor2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2757,7 +2597,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1921" height="1050" extended-state="0" />
+    <frame x="0" y="33" width="1921" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2768,17 +2608,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295699" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1929" y="50" width="1863" height="991" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32247192" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1929" y="50" width="1863" height="991" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247192" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17893605" sideWeight="0.492674" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2790,6 +2629,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2846,20 +2686,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotatebuttonback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15437004">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/showmenudasa.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2122588">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/JSONParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2284069">
@@ -2912,36 +2738,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_principal.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.720339">
           <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_patient.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1440678">
           <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="51" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_catego.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_catego.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.09622642">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/ListadoPacientes.java">
@@ -2952,39 +2778,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/therapeuta_elemento_listado.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12592593">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_listado_pacientes.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61877394">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_catego.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_catego.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
@@ -2994,19 +2812,16 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_therapist.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/listadoTerapeutas.java">
@@ -3031,34 +2846,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_listado_terapeutas.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2308642">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_listado_terapeutas.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
           <caret line="21" column="49" selection-start-line="9" selection-start-column="3" selection-end-line="21" selection-end-column="49" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/login_principal.java">
@@ -3083,17 +2890,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dasa.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_breathing_game.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4962963">
           <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
@@ -3103,21 +2913,11 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/breathingGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58728325">
-          <caret line="480" column="63" selection-start-line="480" selection-start-column="63" selection-end-line="480" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -3128,26 +2928,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_dasa_detail_body.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/elemento_lista_categorias.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/elemento_lista_categorias.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.0">
           <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/anxietyUtils.java">
@@ -3158,14 +2947,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bluecoreservices/anxietymonitor2/MainActivity.java">
@@ -3185,17 +2974,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_catego.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.7090907">
           <caret line="31" column="47" selection-start-line="25" selection-start-column="4" selection-end-line="31" selection-end-column="47" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_dasa.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.192307">
           <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
@@ -3204,99 +2996,30 @@
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_add_dasa.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.636364">
-          <caret line="470" column="70" selection-start-line="470" selection-start-column="70" selection-end-line="470" selection-end-column="70" />
-          <folding>
-            <element signature="e#354#394#0" expanded="true" />
-            <element signature="e#734#4930#0" expanded="false" />
-            <element signature="e#1643#1662#0" expanded="true" />
-            <element signature="e#1696#1718#0" expanded="true" />
-            <element signature="e#2849#2873#0" expanded="true" />
-            <element signature="e#3028#3053#0" expanded="true" />
-            <element signature="e#3617#3641#0" expanded="true" />
-            <element signature="e#3827#3852#0" expanded="true" />
-            <element signature="e#4436#4460#0" expanded="true" />
-            <element signature="e#4760#4785#0" expanded="true" />
-            <element signature="e#4940#9048#0" expanded="false" />
-            <element signature="e#5849#5868#0" expanded="true" />
-            <element signature="e#5902#5924#0" expanded="true" />
-            <element signature="e#6999#7023#0" expanded="true" />
-            <element signature="e#7178#7203#0" expanded="true" />
-            <element signature="e#7767#7791#0" expanded="true" />
-            <element signature="e#7977#8002#0" expanded="true" />
-            <element signature="e#8554#8578#0" expanded="true" />
-            <element signature="e#8878#8903#0" expanded="true" />
-            <element signature="e#9058#13163#0" expanded="false" />
-            <element signature="e#9967#9986#0" expanded="true" />
-            <element signature="e#10020#10042#0" expanded="true" />
-            <element signature="e#11117#11141#0" expanded="true" />
-            <element signature="e#11296#11321#0" expanded="true" />
-            <element signature="e#11884#11908#0" expanded="true" />
-            <element signature="e#12094#12119#0" expanded="true" />
-            <element signature="e#12670#12694#0" expanded="true" />
-            <element signature="e#12994#13019#0" expanded="true" />
-            <element signature="e#13173#17278#0" expanded="false" />
-            <element signature="e#14082#14101#0" expanded="true" />
-            <element signature="e#14135#14157#0" expanded="true" />
-            <element signature="e#15232#15256#0" expanded="true" />
-            <element signature="e#15411#15436#0" expanded="true" />
-            <element signature="e#15999#16023#0" expanded="true" />
-            <element signature="e#16209#16234#0" expanded="true" />
-            <element signature="e#16785#16809#0" expanded="true" />
-            <element signature="e#17109#17134#0" expanded="true" />
-            <element signature="e#17288#21393#0" expanded="false" />
-            <element signature="e#18197#18216#0" expanded="true" />
-            <element signature="e#18250#18272#0" expanded="true" />
-            <element signature="e#19347#19371#0" expanded="true" />
-            <element signature="e#19526#19551#0" expanded="true" />
-            <element signature="e#20114#20138#0" expanded="true" />
-            <element signature="e#20324#20349#0" expanded="true" />
-            <element signature="e#20900#20924#0" expanded="true" />
-            <element signature="e#21224#21249#0" expanded="true" />
-            <element signature="e#22312#22331#0" expanded="true" />
-            <element signature="e#22365#22387#0" expanded="true" />
-            <element signature="e#23505#23529#0" expanded="true" />
-            <element signature="e#23684#23709#0" expanded="true" />
-            <element signature="e#24272#24296#0" expanded="true" />
-            <element signature="e#24482#24507#0" expanded="true" />
-            <element signature="e#25058#25082#0" expanded="true" />
-            <element signature="e#25382#25407#0" expanded="true" />
-            <element signature="e#25561#29666#0" expanded="false" />
-            <element signature="e#26470#26489#0" expanded="true" />
-            <element signature="e#26523#26545#0" expanded="true" />
-            <element signature="e#27620#27644#0" expanded="true" />
-            <element signature="e#27799#27824#0" expanded="true" />
-            <element signature="e#28387#28411#0" expanded="true" />
-            <element signature="e#28597#28622#0" expanded="true" />
-            <element signature="e#29173#29197#0" expanded="true" />
-            <element signature="e#29497#29522#0" expanded="true" />
-            <element signature="e#29676#33781#0" expanded="false" />
-            <element signature="e#30585#30604#0" expanded="true" />
-            <element signature="e#30638#30660#0" expanded="true" />
-            <element signature="e#31735#31759#0" expanded="true" />
-            <element signature="e#31914#31939#0" expanded="true" />
-            <element signature="e#32502#32526#0" expanded="true" />
-            <element signature="e#32712#32737#0" expanded="true" />
-            <element signature="e#33288#33312#0" expanded="true" />
-            <element signature="e#33612#33637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="70" selection-start-line="470" selection-start-column="70" selection-end-line="470" selection-end-column="70" />
+          <folding>
+            <element signature="e#734#4930#0" expanded="false" />
+            <element signature="e#4940#9048#0" expanded="false" />
+            <element signature="e#9058#13163#0" expanded="false" />
+            <element signature="e#13173#17278#0" expanded="false" />
+            <element signature="e#17288#21393#0" expanded="false" />
+            <element signature="e#25561#29666#0" expanded="false" />
+            <element signature="e#29676#33781#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030965392">
           <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3332,14 +3055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3356,29 +3071,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6415094">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.5992714">
+          <caret line="85" column="76" selection-start-line="85" selection-start-column="76" selection-end-line="85" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/categoicon.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.864124">
-          <caret line="92" column="55" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="66" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/circular.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2830188">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_dasa_detail_body.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.018182">
+          <caret line="28" column="45" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.09434">
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_catego_detail_body.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2">
+          <caret line="62" column="71" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="71" />
           <folding>
-            <element signature="e#702#720#0" expanded="true" />
-            <element signature="e#1162#1180#0" expanded="true" />
-            <element signature="e#1521#1539#0" expanded="true" />
-            <element signature="e#1985#2003#0" expanded="true" />
-            <element signature="e#2341#2374#0" expanded="true" />
-            <element signature="e#2772#2803#0" expanded="true" />
-            <element signature="e#3196#3224#0" expanded="true" />
-            <element signature="e#3616#3634#0" expanded="true" />
-            <element signature="e#3944#3979#0" expanded="true" />
+            <element signature="e#3349#3371#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/fragment_main_catego.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="method#onCreateView#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="method#cargarDatos#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="class#obtenerDatosGrafica#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="class#obtenerDatosLista#0;class#fragment_main_catego#0" expanded="false" />
+            <element signature="class#17962:18749" expanded="false" />
+            <element signature="e#18165#18699#0" expanded="true" />
+            <element signature="e#18698#18699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.123861566">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

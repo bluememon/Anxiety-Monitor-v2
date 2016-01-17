@@ -1,6 +1,6 @@
 package layout;
 
-
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -20,18 +20,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bluecoreservices.anxietymonitor.JSONParser;
-import com.bluecoreservices.anxietymonitor.ListadoPacientes;
 import com.bluecoreservices.anxietymonitor.MainActivity;
 import com.bluecoreservices.anxietymonitor.R;
 import com.bluecoreservices.anxietymonitor.anxietyUtils;
+import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -44,7 +42,6 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -58,6 +55,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class fragment_main_catego extends Fragment {
     public final static String PAGINA_DEBUG = "fragment_main_catego";
@@ -357,6 +356,8 @@ public class fragment_main_catego extends Fragment {
             TextView categoSeverity;
             TextView categoDetails;
 
+            ArcProgress severityBar;
+
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
@@ -455,14 +456,6 @@ public class fragment_main_catego extends Fragment {
                 ArrayList<String> nombres = new ArrayList<String>();
                 final ArrayList<String> ids = new ArrayList<String>();
 
-                //ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, nombres);
-                //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-                /*if (listSize > 0){
-                    nombres.clear();
-                    adapter.notifyDataSetChanged();
-                }*/
-
                 try {
                     categoriaLista = result.getJSONArray("categoInfo");
                     JSONObject categoriaElemento = categoriaLista.getJSONObject(0);
@@ -471,14 +464,46 @@ public class fragment_main_catego extends Fragment {
                     categoName = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
                     categoSeverity = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catSeverity);
                     categoDetails = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catDetails);
-                    categoDate = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_catName);
+                    categoDate = (TextView) dialogBody.findViewById(R.id.dialog_catego_detail_date);
+                    severityBar = (ArcProgress) dialogBody.findViewById(R.id.view_catego_seek);
+
+                    final Integer catSeverity = Integer.parseInt(categoriaElemento.getString("severidad")) * 10;
 
                     categoName.setText(categoriaElemento.getString("categoria"));
-                    categoSeverity.setText(categoriaElemento.getString("severidad"));
-                    categoDetails.setText(categoriaElemento.getString("informacion"));
+                    categoSeverity.setText(catSeverity.toString());
+                    if (!categoriaElemento.getString("informacion").equals("")) {
+                        categoDetails.setText(categoriaElemento.getString("informacion"));
+                    }
+                    else {
+                        LinearLayout detalles = (LinearLayout)dialogBody.findViewById(R.id.dialog_catego_detail_catDetails_wrapper);
+                        detalles.setVisibility(View.INVISIBLE);
+                    }
 
                     anxietyUtils.friendlyDate fDate = new anxietyUtils.friendlyDate(getContext(), categoriaElemento.getString("fecha"));
                     categoDate.setText(fDate.getFriendlyDate());
+
+                    //severityBar.setProgress(catSeverity);
+                    severityBar.setBottomText(categoriaElemento.getString("categoria"));
+
+                    final Timer timer = new Timer();
+                    timer.schedule(new TimerTask() {
+                        Integer count =  0;
+                        @Override
+                        public void run() {
+                            ((Activity)getContext()).runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if (count <= catSeverity) {
+                                        severityBar.setProgress(count);
+                                        count++;
+                                    }
+                                    else {
+                                        timer.cancel();
+                                    }
+                                }
+                            });
+                        }
+                    }, 1000, 70);
 
 
                     final AlertDialog dialog = builder.create();
