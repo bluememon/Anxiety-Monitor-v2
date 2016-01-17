@@ -90,5 +90,13 @@
             android:id="@+id/countDownTF" />
     </RelativeLayout>
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_fingerprint_white_24px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
