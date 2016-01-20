@@ -137,7 +137,7 @@
         <item>Diciembre</item>
     </string-array>
 
-    <!-- aqui las traducciones del instrumento final de paciente -->
+    <!-- aqui las traducciones del instrumento final de paciente y terapeuta -->
     <string name="title_activity_final_instrument_patient">Evaluacion Final</string>
 
     <string name="final_instrument_patient_intro_1">Este cuestionario se ha diseñado para medir el nivel de percepción sobre el uso y utilidad de la aplicación “monitor de ansiedad”.</string>
@@ -150,6 +150,9 @@
     <string name="final_instrument_t1">Facilidad de uso</string>
     <string name="final_instrument_q1_1">El uso de la sección de registro de experiencias diaria (DAS-A) se me hizo:</string>
     <string name="final_instrument_q1_2">El uso de la sección de registro de categorías detonantes de ansiedad se me hizo en general:</string>
+
+    <string name="final_instrument_q1_1_therapist">El acceso a la información de registro de experiencias diaria (DAS-A) se me hizo:</string>
+    <string name="final_instrument_q1_2_therapist">El acceso a la información de registro de categorías detonantes de ansiedad se me hizo en general:</string>
 
     <string name="final_instrument_t2">Utilidad de la información proporcionada:</string>
     <string name="final_instrument_q2_1">La gráfica generada por los registros de la evaluación diaria (DAS-A) durante el tratamiento fue:</string>

@@ -70,7 +70,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/label_size"
-                            android:text="@string/final_instrument_q1_1"
+                            android:text="@string/final_instrument_q1_1_therapist"
                             android:labelFor="@+id/final_instrument_q1_1"
                             android:layout_marginBottom="25dp" />
 
@@ -128,7 +128,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/label_size"
-                            android:text="@string/final_instrument_q1_2"
+                            android:text="@string/final_instrument_q1_2_therapist"
                             android:labelFor="@+id/final_instrument_q1_2"
                             android:layout_marginBottom="25dp" />
 
