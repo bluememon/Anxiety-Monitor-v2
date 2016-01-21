@@ -37,7 +37,7 @@ import java.util.Calendar;
  * Created by Guillermo Uribe on 18/12/2015.
  */
 public class dasa_notifications extends Service {
-    public final static String PAGINA_DEBUG = "dasa_notification";
+    public final static String PAGINA_DEBUG = "dasa_notifications";
     SharedPreferences sharedPref;
 
     Calendar calendarInicio;
@@ -98,7 +98,6 @@ public class dasa_notifications extends Service {
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setVibrate(new long[] {1000, 500, 250, 500 })
                 .setLights(0xffffff, 3000, 3000)
-                .setSmallIcon(R.drawable.ic_comment_24dp)
                 .setContentTitle("Anxiety Monitor")
                 .setContentText("Recordatorio para llenar el diario")
                 .setContentIntent(contentIntent)
@@ -124,7 +123,7 @@ public class dasa_notifications extends Service {
         // I want to restart this service again in one hour
         if (calendar.compareTo(calendarInicio) > 0 && calendar.compareTo(calendarFin) < 0) {
                     alarm.set(AlarmManager.RTC_WAKEUP,
-                            calendar.getTimeInMillis() + (1000 * 60 * 10),
+                            calendar.getTimeInMillis() + (1000 * 60 * 60),
                             PendingIntent.getService(this, 0, new Intent(this, dasa_notifications.class), 0)
                     );
         }

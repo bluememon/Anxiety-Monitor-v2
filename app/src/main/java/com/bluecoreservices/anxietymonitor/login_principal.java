@@ -59,6 +59,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import service.dasa_notifications;
+import service.final_notifications;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -73,8 +74,6 @@ public class login_principal extends AppCompatActivity {
     private EditText editTextUserName;
     private EditText editTextPassword;
 
-    public static final String USER_NAME = "USERNAME";
-
     String username;
     String password;
 
@@ -87,13 +86,16 @@ public class login_principal extends AppCompatActivity {
         sharedPref = getSharedPreferences("userPref", 0);
 
         if (sharedPref.getString("logged", null) != null) {
-            Log.i("logged", sharedPref.getString("logged", ""));
-            Log.i("id", sharedPref.getString("id", ""));
-            Log.i("firstName", sharedPref.getString("firstName", ""));
-            Log.i("lastName", sharedPref.getString("lastName", ""));
-            Log.i("type", sharedPref.getString("type", ""));
+            Log.i(PAGINA_DEBUG, "logged: " + sharedPref.getString("logged", ""));
+            Log.i(PAGINA_DEBUG, "id: "+ sharedPref.getString("userId", ""));
+            Log.i(PAGINA_DEBUG, "firstName: "+ sharedPref.getString("firstName", ""));
+            Log.i(PAGINA_DEBUG, "lastName: " + sharedPref.getString("lastName", ""));
+            Log.i(PAGINA_DEBUG, "type " + sharedPref.getString("type", ""));
 
             sendToLandingPage(sharedPref.getString("type", ""));
+        }
+        else {
+            Log.i(PAGINA_DEBUG, "No se encontraron los datos");
         }
 
         editTextUserName = (EditText) findViewById(R.id.username);
@@ -109,8 +111,10 @@ public class login_principal extends AppCompatActivity {
                 login(username, password);
             }
         });
-
+        Log.i(PAGINA_DEBUG, "Comenzando notificaciones dasa");
         startService(new Intent(this, dasa_notifications.class));
+        Log.i(PAGINA_DEBUG, "Comenzando notificaciones finales");
+        startService(new Intent(this, final_notifications.class));
 
     }
     @Override
@@ -119,11 +123,11 @@ public class login_principal extends AppCompatActivity {
         sharedPref = getSharedPreferences("userPref", 0);
 
         if (sharedPref.getString("logged", null) != null) {
-            Log.i("logged", sharedPref.getString("logged", ""));
-            Log.i("id", sharedPref.getString("id", ""));
-            Log.i("firstName", sharedPref.getString("firstName", ""));
-            Log.i("lastName", sharedPref.getString("lastName", ""));
-            Log.i("type", sharedPref.getString("type", ""));
+            Log.i(PAGINA_DEBUG, "logged: " + sharedPref.getString("logged", ""));
+            Log.i(PAGINA_DEBUG, "id: "+ sharedPref.getString("userId", ""));
+            Log.i(PAGINA_DEBUG, "firstName: "+ sharedPref.getString("firstName", ""));
+            Log.i(PAGINA_DEBUG, "lastName: " + sharedPref.getString("lastName", ""));
+            Log.i(PAGINA_DEBUG, "type " + sharedPref.getString("type", ""));
 
             sendToLandingPage(sharedPref.getString("type", ""));
         }
@@ -131,7 +135,6 @@ public class login_principal extends AppCompatActivity {
 
     private void sendToLandingPage(String position) {
         Intent intent = null;
-        Log.e("tipo actual", position);
         switch (position) {
             case "1":
                 // Go to therapist list
