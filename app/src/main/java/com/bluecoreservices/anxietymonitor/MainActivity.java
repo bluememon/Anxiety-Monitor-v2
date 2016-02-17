@@ -32,6 +32,7 @@ import android.widget.RelativeLayout;
 import layout.dasa_calendar;
 import layout.fragment_main_catego;
 import layout.fragment_main_dasa;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
@@ -180,6 +181,16 @@ public class MainActivity extends AppCompatActivity {
 
         if (!sharedPref.getString("type", "").equals("3")) {
             fab.hide();
+        }
+
+        if (sharedPref.getString("firstTime", "").equals("true")){
+            new MaterialShowcaseView.Builder(this)
+                    .setTarget(fab)
+                    .setDismissText(R.string.main_activity_first_time_button)
+                    .setContentText(R.string.main_activity_first_time_text)
+                    .setDelay(500) // optional but starting animations immediately in onCreate can make them choppy
+                            //.singleUse(EXTRA_MESSAGE) // provide a unique ID used to ensure it is only shown once
+                    .show();
         }
     }
 

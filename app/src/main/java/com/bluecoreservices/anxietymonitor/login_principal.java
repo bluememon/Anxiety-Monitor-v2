@@ -111,9 +111,7 @@ public class login_principal extends AppCompatActivity {
                 login(username, password);
             }
         });
-        Log.i(PAGINA_DEBUG, "Comenzando notificaciones dasa");
         startService(new Intent(this, dasa_notifications.class));
-        Log.i(PAGINA_DEBUG, "Comenzando notificaciones finales");
         startService(new Intent(this, final_notifications.class));
 
     }
@@ -129,6 +127,9 @@ public class login_principal extends AppCompatActivity {
             Log.i(PAGINA_DEBUG, "lastName: " + sharedPref.getString("lastName", ""));
             Log.i(PAGINA_DEBUG, "type " + sharedPref.getString("type", ""));
 
+            SharedPreferences.Editor editor= sharedPref.edit();
+            editor.putString("firstTime", "false");
+            editor.commit();
             sendToLandingPage(sharedPref.getString("type", ""));
         }
     }
@@ -260,9 +261,7 @@ public class login_principal extends AppCompatActivity {
 
             @Override
             protected void onPostExecute(JSONObject result) {
-                //String s = result.trim();
                 String tipo = null;
-                Log.i("variable s", result.toString());
                 loadingDialog.dismiss();
 
                 try {
@@ -272,7 +271,6 @@ public class login_principal extends AppCompatActivity {
                 }
 
                 if (tipo == "true") {
-                    Log.i("login", "si lo encontro como trv");
                     SharedPreferences.Editor editor= sharedPref.edit();
 
                     try {
@@ -281,10 +279,9 @@ public class login_principal extends AppCompatActivity {
                         editor.putString("firstName", result.getString("firstName").toString());
                         editor.putString("lastName", result.getString("lastName").toString());
                         editor.putString("type", result.getString("type").toString());
+                        editor.putString("firstTime", "true");
 
                         editor.commit();
-
-                        Log.i("login", "se agregaron las variables globales");
 
                         sendToLandingPage(result.getString("type").toString());
 

@@ -22,6 +22,14 @@
     <string name="add_therapist_label_password">Contraseña</string>
     <string name="add_therapist_label_repeat_password">Repetir Contraseña</string>
 
+    <!-- Labels para tutorial en español agregar pacientes -->
+    <string name="patient_list_first_time_text">Para agregar un paciente nuevo presione el botón de agregar</string>
+    <string name="patient_list_first_time_button">Ok Entendido</string>
+
+    <!-- Labels para tutorial en español agregar pacientes -->
+    <string name="main_activity_first_time_text">Para agregar un nuevo reporte presiones este boton</string>
+    <string name="main_activity_first_time_button">Ok Entendido</string>
+
     <!-- Labels para agregar paciente español -->
     <string name="add_patient_sub_title">Agregar Paciente</string>
     <string name="add_patient_label_first_name">Nombre Paciente</string>

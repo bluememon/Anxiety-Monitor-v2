@@ -8,7 +8,6 @@ package com.bluecoreservices.anxietymonitor;
         import android.content.SharedPreferences;
         import android.net.ConnectivityManager;
         import android.net.NetworkInfo;
-        import android.net.Uri;
         import android.os.AsyncTask;
         import android.os.Bundle;
         import android.support.design.widget.FloatingActionButton;
@@ -32,6 +31,8 @@ package com.bluecoreservices.anxietymonitor;
         import java.io.IOException;
         import java.util.ArrayList;
         import java.util.HashMap;
+
+        import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 
 public class ListadoPacientes extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
@@ -57,6 +58,7 @@ public class ListadoPacientes extends AppCompatActivity {
     TextView terapeuta_elemento;
     View headerView;
     Boolean isAdmin = false;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +108,7 @@ public class ListadoPacientes extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -258,37 +260,49 @@ public class ListadoPacientes extends AppCompatActivity {
 
         try {
             pacientes = result.getJSONArray("patientsList");
-            Log.i("JSON", pacientes.toString());
+            if (pacientes.length() > 0) {
 
-            for (int i = 0; i < pacientes.length(); i++) {
-                JSONObject t = pacientes.getJSONObject(i);
+                for (int i = 0; i < pacientes.length(); i++) {
+                    JSONObject t = pacientes.getJSONObject(i);
 
-                String fullName = t.getString("firstName") + " " + t.getString("lastName");
+                    String fullName = t.getString("firstName") + " " + t.getString("lastName");
 
-                HashMap<String, String> map = new HashMap<String, String>();
-                map.put("id", t.getString("id"));
-                map.put("fullName", fullName);
+                    HashMap<String, String> map = new HashMap<String, String>();
+                    map.put("id", t.getString("id"));
+                    map.put("fullName", fullName);
 
-                patientsList.add(map);
-                //terapeuta_nombre
+                    patientsList.add(map);
+                    //terapeuta_nombre
+                }
+
+                adapter = new SimpleAdapter(ListadoPacientes.this, patientsList,
+                        R.layout.therapeuta_elemento_listado,
+                        new String[]{"fullName"}, new int[]{
+                        R.id.terapeuta_nombre});
+
+                lista.setAdapter(adapter);
+                lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,
+                                            int position, long id) {
+                        abrirPrincipal(patientsList.get((position)).get("id"), patientsList.get((position)).get("fullName"));
+
+                    }
+                });
+                adapter.notifyDataSetChanged();
+
+            }
+            else {
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(fab)
+                        .setDismissText(R.string.patient_list_first_time_button)
+                        .setContentText(R.string.patient_list_first_time_text)
+                        .setDelay(500) // optional but starting animations immediately in onCreate can make them choppy
+                        //.singleUse(EXTRA_MESSAGE) // provide a unique ID used to ensure it is only shown once
+                        .show();
             }
 
-            adapter = new SimpleAdapter(ListadoPacientes.this, patientsList,
-                    R.layout.therapeuta_elemento_listado,
-                    new String[] { "fullName" }, new int[] {
-                    R.id.terapeuta_nombre});
-
-            lista.setAdapter(adapter);
-            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                                        int position, long id) {
-                    abrirPrincipal(patientsList.get((position)).get("id"), patientsList.get((position)).get("fullName"));
-
-                }
-            });
-            adapter.notifyDataSetChanged();
             swipeRefreshLayout.setRefreshing(false);
         } catch (JSONException e) {
             e.printStackTrace();
