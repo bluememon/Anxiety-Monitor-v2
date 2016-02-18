@@ -71,6 +71,8 @@ public class fragment_main_dasa extends Fragment {
     JSONParser json1 = new JSONParser();
     JSONParser jsonLista = new JSONParser();
 
+    Boolean isFirstTime = true;
+
     SimpleAdapter adapter;
 
     ArrayList<HashMap<String, String>> dasasList;
@@ -249,11 +251,11 @@ public class fragment_main_dasa extends Fragment {
         protected void onPostExecute(JSONObject result) {
             procesaJSONLista(result);
             swipeRefreshLayout.setRefreshing(false);
-
-            Snackbar snackbar = Snackbar
-                    .make(getActivity().findViewById(R.id.main_content), "Diario Actualizado", Snackbar.LENGTH_LONG);
-
-            snackbar.show();
+            if (!isFirstTime) {
+                Snackbar snackbar = Snackbar.make(getActivity().findViewById(R.id.main_content), "Diario Actualizado", Snackbar.LENGTH_LONG);
+                snackbar.show();
+            }
+            isFirstTime = false;
         }
 
         public void procesaJSONLista(JSONObject result) {

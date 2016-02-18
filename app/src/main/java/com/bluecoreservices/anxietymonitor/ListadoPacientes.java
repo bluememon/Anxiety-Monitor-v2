@@ -60,6 +60,8 @@ public class ListadoPacientes extends AppCompatActivity {
     Boolean isAdmin = false;
     FloatingActionButton fab;
 
+    Boolean isFirstTime = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,6 +148,14 @@ public class ListadoPacientes extends AppCompatActivity {
                                     }
                                 }
         );
+
+        new MaterialShowcaseView.Builder(this)
+                .setTarget(fab)
+                .setDismissText(R.string.main_activity_first_time_button)
+                .setContentText(R.string.main_activity_first_time_text)
+                .setDelay(500) // optional but starting animations immediately in onCreate can make them choppy
+                .singleUse(EXTRA_MESSAGE) // provide a unique ID used to ensure it is only shown once
+                .show();
     }
 
     @Override
@@ -239,9 +249,13 @@ public class ListadoPacientes extends AppCompatActivity {
                 procesaJSON(result);
             }
 
-            Snackbar snackbar = Snackbar
-                    .make(findViewById(R.id.contenidoPacientes), "Lista Actualizada", Snackbar.LENGTH_LONG);
-            snackbar.show();
+            if (!isFirstTime) {
+                Snackbar snackbar = Snackbar
+                        .make(findViewById(R.id.contenidoPacientes), "Lista Actualizada", Snackbar.LENGTH_LONG);
+                snackbar.show();
+            }
+
+            isFirstTime = false;
         }
     }
 

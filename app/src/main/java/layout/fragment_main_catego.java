@@ -69,6 +69,7 @@ public class fragment_main_catego extends Fragment {
     String dasaURLLista = "http://app.bluecoreservices.com/webservices/ListCategoGet.php?idPaciente=";
     JSONParser json1 = new JSONParser();
     JSONParser jsonLista = new JSONParser();
+    Boolean isFirstTime = true;
 
     SimpleAdapter adapter;
 
@@ -110,12 +111,12 @@ public class fragment_main_catego extends Fragment {
          * As animation won't start on onCreate, post runnable is used
          */
         swipeRefreshLayout.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        swipeRefreshLayout.setRefreshing(true);
-                                        generateCategoChart();
-                                    }
-                                }
+                @Override
+                public void run() {
+                    swipeRefreshLayout.setRefreshing(true);
+                    generateCategoChart();
+                }
+            }
         );
 
         return view;
@@ -278,11 +279,11 @@ public class fragment_main_catego extends Fragment {
         protected void onPostExecute(JSONObject result) {
             procesaJSONLista(result);
             swipeRefreshLayout.setRefreshing(false);
-
-            Snackbar snackbar = Snackbar
-                    .make(getActivity().findViewById(R.id.main_content), "Categorias Actualizadas", Snackbar.LENGTH_LONG);
-
-            snackbar.show();
+            if (!isFirstTime){
+                Snackbar snackbar = Snackbar.make(getActivity().findViewById(R.id.main_content), "Categorias Actualizadas", Snackbar.LENGTH_LONG);
+                snackbar.show();
+            }
+            isFirstTime = false;
         }
 
         public void procesaJSONLista(JSONObject result) {

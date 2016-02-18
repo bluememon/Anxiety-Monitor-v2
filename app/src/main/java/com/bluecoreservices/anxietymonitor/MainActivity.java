@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             fab.hide();
         }
 
-        if (sharedPref.getString("firstTime", "").equals("true")){
+        if (sharedPref.getString("firstTime", "").equals("true") && sharedPref.getString("type", "").equals("3")){
             new MaterialShowcaseView.Builder(this)
                     .setTarget(fab)
                     .setDismissText(R.string.main_activity_first_time_button)
