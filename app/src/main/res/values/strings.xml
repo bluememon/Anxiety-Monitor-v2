@@ -27,7 +27,18 @@
     <string name="patient_list_first_time_button">Ok Entendido</string>
 
     <!-- Labels para tutorial en español agregar pacientes -->
-    <string name="main_activity_first_time_text">Para agregar un nuevo reporte presiones este boton</string>
+    <string name="dasa_button_first_time_text">Para agregar un nuevo registro de diario presiona este botón.\n\n
+        El diário solamente se puede llenar una vez al día de preferencia antes de dormir.\n\n
+        En caso de que se te olvide, la aplicación te recordará llenarlo en la noche.
+    </string>
+
+    <!-- Labels para tutorial en español agregar pacientes -->
+    <string name="categories_button_first_time_text">Para agregar un nuevo registro de crísis de ansiedad, presiona éste botón.\n\n
+        Puedes utilizar este reporte las veces que consideres necesario.
+    </string>
+
+    <!-- Labels para tutorial en español agregar pacientes -->
+    <string name="main_activity_first_time_text">Para agregar un nuevo reporte presione este boton</string>
     <string name="main_activity_first_time_button">Ok Entendido</string>
 
     <!-- Labels para agregar paciente español -->
@@ -121,7 +132,23 @@
     <string name="respiration_dialog_cancelbutton">Después</string>
 
     <string name="anxiety_game_title">Respira profundo</string>
+    <string name="intro_respiration">
+        La parte autonómica de tu sistema nervioso tiene el trabajo de mantener el control de tu corazón, respiración y otros procesos del cuerpo durante la calma, el estrés interrumpe dichas funciones.\n\n
+        Una manera de bloquear tu estrés es aprender a modificar dichos procesos, la respiración es el más accesible de los procesos, si aprendes a regresarla a su control autonómico, tendrás una poderosa herramienta de relajación.\n\n
+        Siéntate comfortablemente en una posición que puedas mantener sin mucho movimiento adicional.\n\n
+        Utiliza este ejercicio en cualquier situación que te pueda generar estrés: tráfico, aviones, durante un trabajo demandante o actividades sociales, anticipando eventos estresantes. Duerme una hora extra y trata de eliminar la cafeína, y alcohol de tu dieta.\n\n
+        Reduce gradualmente la cantidad de tiempo en tu actividad estresante hasta un 20%.
+    </string>
+    <string name="stop_quote">¡Detente! Para tu respiración y deja que comience a su manera.</string>
     <string-array name="anxiety_quotes">
+        <item>Respira y nota conscientemente tu respiración dentro y fuera de tu cuerpo. Escucha el sonido del aire que pasa por tu nariz y siente como tu respiración sale por tus fosas nasales. En este momento estarás en un control consciente de tu respiración.</item>
+        <item>Lo mejor que se puede hacer para reducir el estrés e iniciar a relajarse es  el incrementar el control sobre tus pensamientos.</item>
+        <item>Cuando estás distraído o cuando tienes muchos pensamientos innecesarios, eres más ineficiente y tu mente tiene que trabajar más pesado para cumplir con las responsabilidades diarias.</item>
+        <item>Los pensamientos innecesarios, generan un estímulo para el cuerpo, presentando una reacción de estrés y al repetirse una y otra vez, generan ansiedad.</item>
+        <item>Mientras estás respirando, detecta los pensamientos que pueden estarte molestando y piensa en qué quieres hacer con ellos, utilizando los mismos enunciados cada que se vengan a la mente: “quiero estar relajado y tranquilo”.</item>
+        <item>Enfocar tu atención, reduce tu diálogo interno, ayuda a tener un sentido interno de ti haciendo este ejercicio. El sentido de ti mismo viene de tu mente, cualquier pensamiento puede ser controlado por ti, así como tu destino.</item>
+    </string-array>
+    <string-array name="anxiety_quotes2">
         <item>I, not events, have the power to make me happy or unhappy today. I can choose which it shall be. Yesterday is dead, tomorrow hasn\'t arrived yet. I have just one day, today, and I\'m going to be happy in it.</item>
         <item>Politics is the art of looking for trouble, finding it everywhere, diagnosing it incorrectly and applying the wrong remedies.</item>
         <item>A black cat crossing your path signifies that the animal is going somewhere.</item>

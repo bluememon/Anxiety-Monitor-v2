@@ -148,14 +148,15 @@ public class ListadoPacientes extends AppCompatActivity {
                                     }
                                 }
         );
-
-        new MaterialShowcaseView.Builder(this)
-                .setTarget(fab)
-                .setDismissText(R.string.main_activity_first_time_button)
-                .setContentText(R.string.main_activity_first_time_text)
-                .setDelay(500) // optional but starting animations immediately in onCreate can make them choppy
-                .singleUse(EXTRA_MESSAGE) // provide a unique ID used to ensure it is only shown once
-                .show();
+        if (sharedPref.getString("firstTime", "").equals("true") && sharedPref.getString("type", "").equals("2")) {
+            new MaterialShowcaseView.Builder(this)
+                    .setTarget(fab)
+                    .setDismissText(R.string.main_activity_first_time_button)
+                    .setContentText(R.string.patient_list_first_time_text)
+                    .setDelay(500) // optional but starting animations immediately in onCreate can make them choppy
+                            //.singleUse(EXTRA_MESSAGE) // provide a unique ID used to ensure it is only shown once
+                    .show();
+        }
     }
 
     @Override

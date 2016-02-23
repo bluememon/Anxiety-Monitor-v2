@@ -32,7 +32,9 @@ import android.widget.RelativeLayout;
 import layout.dasa_calendar;
 import layout.fragment_main_catego;
 import layout.fragment_main_dasa;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bluecoreservices.anxietymonitor.ID_PACIENTE";
@@ -230,11 +232,28 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
                 backgroundMenu.setVisibility(View.VISIBLE);
                 itemDasa.setVisibility(View.VISIBLE);
-                itemCatego.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onAnimationEnd(Animation animation) { }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) { }
+        };
+
+        AnimationListener entrada2 = new AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                itemCatego.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                //if (sharedPref.getString("firstTime", "").equals("true") && sharedPref.getString("type", "").equals("3")) {
+                    //Add the tutorials
+                    presentShowcaseView();
+                //}
+            }
 
             @Override
             public void onAnimationRepeat(Animation animation) { }
@@ -256,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         rotateButton.setAnimationListener(entrada);
-        showElements.setAnimationListener(entrada);
+        showElements.setAnimationListener(entrada2);
         showElementsDasa.setAnimationListener(entrada);
 
         rotateButtonBack.setAnimationListener(salida);
@@ -392,5 +411,34 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStop() {
         super.onStop();
+    }
+
+    private void presentShowcaseView() {
+
+        ShowcaseConfig config = new ShowcaseConfig();
+        config.setDelay(500);
+
+        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this);
+
+        sequence.setConfig(config);
+
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(fabCatego)
+                        .setDismissText(R.string.main_activity_first_time_button)
+                        .setContentText(R.string.categories_button_first_time_text)
+                        .build()
+        );
+
+        sequence.addSequenceItem(
+                new MaterialShowcaseView.Builder(this)
+                        .setTarget(fabDasa)
+                        .setDismissText(R.string.main_activity_first_time_button)
+                        .setContentText(R.string.dasa_button_first_time_text)
+                        .build()
+        );
+
+        sequence.start();
     }
 }
