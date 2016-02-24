@@ -8,10 +8,13 @@
     <color name="dividerColor">#B6B6B6</color>
 
     <string-array name="color_array">
+        <item>#FF0000</item>
         <item>#CD0300</item>
         <item>#E15F00</item>
         <item>#F2E66B</item>
         <item>#0DA66B</item>
+        <item>#00796B</item>
+        <item>#00796B</item>
         <item>#00796B</item>
     </string-array>
 </resources>

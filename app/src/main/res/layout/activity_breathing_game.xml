@@ -69,7 +69,8 @@
                 android:elegantTextHeight="true"
                 android:fontFamily="sans-serif-light"
                 android:id="@+id/quoteText"
-                android:clickable="false" />
+                android:clickable="false"
+                android:text="@string/first_instruction"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -78,16 +79,38 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:clipToPadding="false"
-        android:paddingTop="20dp">
+        android:paddingTop="40dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:textColor="#ffffff"
-            android:textSize="80dp"
+            android:textSize="20dp"
             android:elegantTextHeight="true"
             android:clipToPadding="false"
+            android:fontFamily="sans-serif-light"
             android:id="@+id/countDownTF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:paddingTop="50dp"
+        android:id="@+id/releaseText">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:elegantTextHeight="true"
+            android:clipToPadding="false"
+            android:text="@string/stop_message"
+            android:fontFamily="sans-serif-light"
+            android:id="@+id/releaseText2"/>
     </RelativeLayout>
 
         <ImageView

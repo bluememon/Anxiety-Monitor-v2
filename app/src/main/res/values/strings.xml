@@ -28,12 +28,15 @@
 
     <!-- Labels para tutorial en español agregar pacientes -->
     <string name="dasa_button_first_time_text">Para agregar un nuevo registro de diario presiona este botón.\n\n
-        El diário solamente se puede llenar una vez al día de preferencia antes de dormir.\n\n
+        Los registros del diario sirven para poder saber dia a dia el avance o retroceso de tu nivel de ansiedad.\n\n
+        El diário solamente se puede llenar una vez al día, de preferencia antes de dormir.\n\n
         En caso de que se te olvide, la aplicación te recordará llenarlo en la noche.
     </string>
 
     <!-- Labels para tutorial en español agregar pacientes -->
     <string name="categories_button_first_time_text">Para agregar un nuevo registro de crísis de ansiedad, presiona éste botón.\n\n
+        La información de los registros sirven para poder saber en qué categorías se divide tu ansiedad generalizada y poder así ver qué es lo que mas te preocupa.\n\n
+        Al saber que categorías acaparan mas tu ansiedad, se puede saber de mejor manera que aspectos atender con prioridad.\n\n
         Puedes utilizar este reporte las veces que consideres necesario.
     </string>
 
@@ -139,14 +142,17 @@
         Utiliza este ejercicio en cualquier situación que te pueda generar estrés: tráfico, aviones, durante un trabajo demandante o actividades sociales, anticipando eventos estresantes. Duerme una hora extra y trata de eliminar la cafeína, y alcohol de tu dieta.\n\n
         Reduce gradualmente la cantidad de tiempo en tu actividad estresante hasta un 20%.
     </string>
+    <string name="stop_message">Suelta el boton y exhala...</string>
     <string name="stop_quote">¡Detente! Para tu respiración y deja que comience a su manera.</string>
+    <string name="first_instruction">Para comenzar, presiona el circulo rojo y comienza a respirar por la nariz.</string>
     <string-array name="anxiety_quotes">
-        <item>Respira y nota conscientemente tu respiración dentro y fuera de tu cuerpo. Escucha el sonido del aire que pasa por tu nariz y siente como tu respiración sale por tus fosas nasales. En este momento estarás en un control consciente de tu respiración.</item>
         <item>Lo mejor que se puede hacer para reducir el estrés e iniciar a relajarse es  el incrementar el control sobre tus pensamientos.</item>
-        <item>Cuando estás distraído o cuando tienes muchos pensamientos innecesarios, eres más ineficiente y tu mente tiene que trabajar más pesado para cumplir con las responsabilidades diarias.</item>
         <item>Los pensamientos innecesarios, generan un estímulo para el cuerpo, presentando una reacción de estrés y al repetirse una y otra vez, generan ansiedad.</item>
+        <item>Cuando estás distraído o cuando tienes muchos pensamientos innecesarios, eres más ineficiente y tu mente tiene que trabajar más pesado para cumplir con las responsabilidades diarias.</item>
         <item>Mientras estás respirando, detecta los pensamientos que pueden estarte molestando y piensa en qué quieres hacer con ellos, utilizando los mismos enunciados cada que se vengan a la mente: “quiero estar relajado y tranquilo”.</item>
         <item>Enfocar tu atención, reduce tu diálogo interno, ayuda a tener un sentido interno de ti haciendo este ejercicio. El sentido de ti mismo viene de tu mente, cualquier pensamiento puede ser controlado por ti, así como tu destino.</item>
+        <item>Respira y nota conscientemente tu respiración dentro y fuera de tu cuerpo. Escucha el sonido del aire que pasa por tu nariz y siente como tu respiración sale por tus fosas nasales. En este momento estarás en un control consciente de tu respiración.</item>
+        <item>Listo! puedes continuar usando el ejercicio de respiracion. Cuando quieras terminar presiona el boton de "atras"</item>
     </string-array>
     <string-array name="anxiety_quotes2">
         <item>I, not events, have the power to make me happy or unhappy today. I can choose which it shall be. Yesterday is dead, tomorrow hasn\'t arrived yet. I have just one day, today, and I\'m going to be happy in it.</item>

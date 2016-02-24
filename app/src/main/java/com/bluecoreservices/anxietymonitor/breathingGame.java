@@ -4,6 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,13 +30,13 @@ public class breathingGame extends AppCompatActivity {
     SimpleDrawingView circleButton;
     TextView countDown;
     TextView quoteText;
+    View stopMessage;
     View quoteContainer;
     Long ballDuration;
     boolean isCancelled;
     Integer respirationCount;
     ArrayList<String> colorPallete;
     ArrayList<String> quoteList;
-    View digito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,18 +56,19 @@ public class breathingGame extends AppCompatActivity {
         quoteContainer = findViewById(R.id.quoteContainer);
         quoteText = (TextView)findViewById(R.id.quoteText);
         countDown = (TextView)findViewById(R.id.countDownTF);
+        stopMessage = findViewById(R.id.releaseText);
         respirationCount = 0;
 
         colorPallete = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.color_array)));
         quoteList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.anxiety_quotes)));
 
-        quoteContainer.setAlpha(0.0f);
-        quoteText.setText(quoteList.get(respirationCount));
+        stopMessage.setAlpha(0.0f);
+        //quoteText.setText(quoteList.get(respirationCount));
         ballDuration = 1000l;
 
 
         circleButton = (SimpleDrawingView)findViewById(R.id.simpleDrawingView1);
-        circleButton.colorCircle(Color.RED);
+        circleButton.colorCircle(Color.parseColor("#ff0000"));
 
         inflatingButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -84,12 +88,14 @@ public class breathingGame extends AppCompatActivity {
                 return false;
             }
         });
+
+        openRespirationDialog();
     }
 
     private void animateButton() {
         Log.i(PAGINA_DEBUG, "startAnimate!");
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(inflatingButton, "scaleX", 30.0f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(inflatingButton, "scaleY", 30.0f);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(inflatingButton, "scaleX", 25.0f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(inflatingButton, "scaleY", 25.0f);
 
         scaleX.setDuration(ballDuration);
         scaleY.setDuration(ballDuration);
@@ -99,23 +105,53 @@ public class breathingGame extends AppCompatActivity {
         scaleDown.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
-                ObjectAnimator showQuote = ObjectAnimator.ofFloat(quoteContainer, "alpha", 1f);
+                ObjectAnimator showQuote = ObjectAnimator.ofFloat(quoteContainer, "alpha", 0f);
                 showQuote.setDuration(500L);
                 animQuote = new AnimatorSet();
                 animQuote.play(showQuote);
+
+                animQuote.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        if (!isCancelled && respirationCount < 7) {
+                            quoteText.setText(quoteList.get(respirationCount));
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                    }
+                });
                 animQuote.start();
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
                 countDown(countDown, 3);
+                if (respirationCount < 7) {
+                    ObjectAnimator showQuote = ObjectAnimator.ofFloat(quoteContainer, "alpha", 1f);
+                    showQuote.setDuration(500L);
+                    animQuote = new AnimatorSet();
+                    animQuote.play(showQuote);
+                    animQuote.start();
+                }
             }
 
             @Override
-            public void onAnimationCancel(Animator animation) {}
+            public void onAnimationCancel(Animator animation) {
+            }
 
             @Override
-            public void onAnimationRepeat(Animator animation) {}
+            public void onAnimationRepeat(Animator animation) {
+            }
         });
 
         scaleDown.play(scaleX).with(scaleY);
@@ -146,9 +182,10 @@ public class breathingGame extends AppCompatActivity {
             @Override
             public void onAnimationStart(Animator animation) {
                 if (!isCancelled) {
-                    if (respirationCount < 4) {
-                        final float[] from = new float[3],
-                                to = new float[3];
+                    hideEndMessage();
+                    if (respirationCount < 7) {
+                        Log.i(PAGINA_DEBUG, "Respiration: " + respirationCount);
+                        final float[] from = new float[3], to = new float[3];
 
                         Color.colorToHSV(Color.parseColor(colorPallete.get(respirationCount)), from);   // from white
                         Color.colorToHSV(Color.parseColor(colorPallete.get(respirationCount + 1)), to);     // to red
@@ -176,45 +213,23 @@ public class breathingGame extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                ObjectAnimator showQuote = ObjectAnimator.ofFloat(quoteContainer, "alpha", 0f);
-                showQuote.setDuration(100L);
-                animQuote = new AnimatorSet();
-                animQuote.play(showQuote);
-
-                animQuote.addListener(new Animator.AnimatorListener() {
-                    @Override
-                    public void onAnimationStart(Animator animation) {}
-
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        if (!isCancelled) {
-                            quoteText.setText(quoteList.get(respirationCount));
-                        }
-                    }
-
-                    @Override
-                    public void onAnimationCancel(Animator animation) {}
-
-                    @Override
-                    public void onAnimationRepeat(Animator animation) {}
-                });
-                animQuote.start();
-
                 if (!isCancelled) {
                     if (ballDuration < 3000l) {
                         ballDuration += 600l;
                     }
-                    if (respirationCount < 3) {
+                    if (respirationCount < 7) {
                         respirationCount++;
                     }
                 }
             }
 
             @Override
-            public void onAnimationCancel(Animator animation) {}
+            public void onAnimationCancel(Animator animation) {
+            }
 
             @Override
-            public void onAnimationRepeat(Animator animation) {}
+            public void onAnimationRepeat(Animator animation) {
+            }
         });
         scaleDown.play(scaleX).with(scaleY);
         scaleDown.start();
@@ -223,9 +238,11 @@ public class breathingGame extends AppCompatActivity {
     private void countDown(final TextView tv, final int count) {
         if (count == 0) {
             tv.setText(""); //Note: the TextView will be visible again here.
+            showEndMessage();
             return;
         }
-        tv.setText(Integer.toString(count));
+        //tv.setText(Integer.toString(count));
+        tv.setText("aguanta la respiracion...");
         AlphaAnimation animation = new AlphaAnimation(1.0f, 0.0f);
         animation.setDuration(1000);
         animation.setAnimationListener(new Animation.AnimationListener() {
@@ -233,6 +250,7 @@ public class breathingGame extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
             }
 
+            @Override
             public void onAnimationEnd(Animation anim) {
                 countDown(tv, count - 1);
             }
@@ -242,5 +260,42 @@ public class breathingGame extends AppCompatActivity {
             }
         });
         tv.startAnimation(animation);
+    }
+
+    private void showEndMessage() {
+        ObjectAnimator showQuote = ObjectAnimator.ofFloat(stopMessage, "alpha", 1f);
+        showQuote.setDuration(500L);
+        animQuote = new AnimatorSet();
+        animQuote.play(showQuote);
+        animQuote.start();
+    }
+
+    private void hideEndMessage() {
+        ObjectAnimator showQuote = ObjectAnimator.ofFloat(stopMessage, "alpha", 0f);
+        showQuote.setDuration(500L);
+        animQuote = new AnimatorSet();
+        animQuote.play(showQuote);
+        animQuote.start();
+    }
+
+    private void openRespirationDialog() {
+        //inicializacion del mensaje
+        AlertDialog.Builder builder = new AlertDialog.Builder(breathingGame.this);
+
+        //Titulo y Mensaje
+        builder.setMessage(R.string.intro_respiration);
+                //.setTitle(R.string.respiration_dialog_title);
+        //.setView(inputWrapper);
+
+        //Botones
+        builder.setPositiveButton(R.string.respiration_dialog_okbutton, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                Log.i(PAGINA_DEBUG, "OK Presionado");
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

@@ -426,6 +426,7 @@ public class MainActivity extends AppCompatActivity {
         sequence.addSequenceItem(
                 new MaterialShowcaseView.Builder(this)
                         .setTarget(fabCatego)
+                        .setDismissOnTouch(true)
                         .setDismissText(R.string.main_activity_first_time_button)
                         .setContentText(R.string.categories_button_first_time_text)
                         .build()
@@ -434,7 +435,7 @@ public class MainActivity extends AppCompatActivity {
         sequence.addSequenceItem(
                 new MaterialShowcaseView.Builder(this)
                         .setTarget(fabDasa)
-                        .setDismissText(R.string.main_activity_first_time_button)
+                        .setDismissOnTouch(true)
                         .setContentText(R.string.dasa_button_first_time_text)
                         .build()
         );
