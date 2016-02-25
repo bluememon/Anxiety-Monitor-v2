@@ -55,8 +55,8 @@ public class add_patient extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firstname = editTextUserName.getText().toString();
-                lastname = editTextUserName.getText().toString();
+                firstname = editTextFirstName.getText().toString();
+                lastname = editTextLastName.getText().toString();
                 username = editTextUserName.getText().toString();
                 password = editTextPassword.getText().toString();
                 repassword = editTextRepeatPassword.getText().toString();
