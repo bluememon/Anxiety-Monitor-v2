@@ -297,8 +297,8 @@ public class fragment_main_dasa extends Fragment {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        verDetalleDASA(dasasList.get((position)).get("idEntrada"));
-                        Log.i(PAGINA_DEBUG, dasasList.get((position)).get("idEntrada"));
+                        verDetalleDASA(dasasList.get((position - 1)).get("idEntrada"));
+                        Log.i(PAGINA_DEBUG, dasasList.get((position - 1)).get("idEntrada"));
 
                     }
                 });

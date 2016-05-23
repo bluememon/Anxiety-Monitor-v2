@@ -249,10 +249,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                //if (sharedPref.getString("firstTime", "").equals("true") && sharedPref.getString("type", "").equals("3")) {
+                if (sharedPref.getString("firstTime", "").equals("true") && sharedPref.getString("type", "").equals("3")) {
                     //Add the tutorials
                     presentShowcaseView();
-                //}
+                }
             }
 
             @Override
