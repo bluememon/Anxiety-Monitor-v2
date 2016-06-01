@@ -1,3 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.github.deano2390\MaterialShowcaseView\1.0.5\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="b7795d74131ee808bbe6e24977804b4720172d4c">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.github.deano2390-MaterialShowcaseView-1.0.5_97004ff73dee15a30466d23b61d0375e7a7f8273.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_763fd251f4e091a4243bd036e85a253d92370084.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.1.1_00abeb40c07e65469d66ab4d06de0ce7590db760.jar" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_6ededcc9b39f46fbcdd6efbd1a4d51bb6afd2a15.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.2\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7e6a161b3796c15fe00755ce47e03067e568ecc4">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.github.clans-fab-1.6.2_66389c40ed4b427b9041a026180b394874d3a16c.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.6\b036abbb61656165da99cf44898e4b9123687e65\MPAndroidChart-v2.1.6.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="b036abbb61656165da99cf44898e4b9123687e65">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v2.1.6_04bb143d5eadd4b5afb6bd18c77092109f7c3bd4.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.prolificinteractive\material-calendarview\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="19f21aeff153921e11375e50183f30405d018477">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.prolificinteractive-material-calendarview-1.1.0_fbd6cfa00c7a35f9496d4cddb0d311e4427496e6.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="2195106f020c2fb326ef5c006918e66830205876">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_18b3926904240dfa9e9b03b61d71b3a55ffb2d90.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_e0b3939c1cc48ae4018d4caa1f43389919a27c9c.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_679425fad5f2958bf38b929a766ac3cc0abd58a4.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.github.lzyzsd\circleprogress\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e6f9fb0d2ea982d656d6dca785a9097659395874">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.github.lzyzsd-circleprogress-1.1.0_3a6482d5c9e9ff4541c3aceb8c3ccdba10cd5af9.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="128fea6e072e9f5fe866733136e762d8db52a739">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\instant-run_f3503ad23716e23ef3c204a98d4d76faa526d032.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_13b9ccb9bfe1116c3239d5b832d998f702760752.jar" />
+    </item>
+    <item
+        jar="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\guillermo.uribe\AndroidStudioProjects\anxietyMonitor2\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_99f511eb2f3518c19b87bc0318a457c35449fcd3.jar" />
+    </item>
+
+</items>
